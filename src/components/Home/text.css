@@ -1,0 +1,43 @@
+svg {
+  width: 80rem;
+  font-weight: bold;
+}
+
+svg text {
+  font-size: 6rem;
+  stroke-width: 2;
+  letter-spacing: -2px;
+}
+
+svg text.text-body {
+  fill: rgb(243 244 246);
+  stroke: transparent;
+  stroke-width: 0;
+  stroke-dashoffset: -25%;
+  stroke-dasharray: 32% 0;
+  animation: 3s animate-stroke;
+  text-shadow: 2px 2px 4px rgba(132, 51, 203, 0.5);
+}
+
+@keyframes animate-stroke {
+  0% {
+    fill: transparent;
+    stroke: #90b8d1;
+    stroke-width: 3;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 32%;
+  }
+  50% {
+    fill: transparent;
+    stroke: rgb(132, 51, 203);
+    stroke-width: 3;
+  }
+  80%,
+  100% {
+    fill: rgb(243 244 246);
+    stroke: transparent;
+    stroke-width: 0;
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 32% 0;
+  }
+}
