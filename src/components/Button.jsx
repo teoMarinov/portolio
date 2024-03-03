@@ -1,6 +1,5 @@
 import clsx from "clsx"
 
-// eslint-disable-next-line react/prop-types
 const Button = ({ text, open, setOpen }) => {
     return (
         <button onClick={() => setOpen(text)} className=" group font-poppins p-3 text-lg rounded-md text-gray-100 text-lgtransition-all">
