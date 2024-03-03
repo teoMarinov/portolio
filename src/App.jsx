@@ -1,7 +1,12 @@
+import { useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
+
 export default function App() {
+  const [open, setOpen] = useState('Home');
+
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className=" bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-300 to-gray-400  w-screen h-[3400px]">
+      <Navbar open={open} setOpen={setOpen} />
+    </div>
   )
 }
