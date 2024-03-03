@@ -1,7 +1,7 @@
 import Links from "./Links";
-import "./text.css";
 import { FaGithub } from "react-icons/fa";
 import { GrDocumentDownload } from "react-icons/gr";
+import "./text.css";
 
 const AnimatedText = () => {
   return (
