@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         'curcly': ["Dancing Script", 'cursive'],
+        'poppins': ["Poppins", 'sans']
       }
     },
   },
