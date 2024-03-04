@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
 
 export default function App() {
   const [open, setOpen] = useState('Home');
@@ -13,7 +14,7 @@ export default function App() {
       <Home />
       <AboutMe />
       <Skills />
-      <div className="w-1 h-[3000px]"></div>
+      <Projects />
     </div>
   )
 }
