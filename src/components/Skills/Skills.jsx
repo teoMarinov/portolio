@@ -23,7 +23,7 @@ import nodeJs from "../../assets/SkillsIcons/nodeJS.png"
 const Skills = () => {
     return (
         <div>
-            <div className="flex gap-x-5 size-60 w-full overflow-y-auto mb-16">
+            <div className="flex gap-x-5 lg:size-60 size-40 lg:w-full w-screen overflow-y-auto mb-16">
                 <img src={typeScript} alt="type-script" />
                 <img src={javaScript} alt="java-script" className="" />
                 <img src={html} alt="html" className="" />
@@ -35,7 +35,7 @@ const Skills = () => {
                 <img src={sql} alt="sql" className="" />
                 <img src={framerMotion} alt="framer-motion" className="mt-2" />
             </div>
-            <div className="flex gap-5 size-60 w-full overflow-y-auto mb-16">
+            <div className="flex gap-5 lg:size-60 size-40 lg:w-full w-screen overflow-y-auto mb-16">
                 <img src={tailwind} alt="tailwind" className="mt-2" />
                 <img src={chakraUi} alt="chakraUI" className="mt-2" />
                 <img src={shadcn} alt="shadcn" className="mt-2 rounded-lg" />
