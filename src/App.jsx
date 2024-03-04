@@ -10,7 +10,7 @@ export default function App() {
   const [open, setOpen] = useState('Home');
 
   return (
-    <div className=" w-screen">
+    <div className=" w-screen overflow-x-hidden">
       <Navbar open={open} setOpen={setOpen} />
       <Home />
       <AboutMe />
