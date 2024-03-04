@@ -5,7 +5,7 @@ import ItemRow from './ItemRow'
 
 const Projects = () => {
     return (
-        <div className='flex flex-col gap-y-20'>
+        <div className='flex flex-col gap-y-20 mb-44'>
             <h1 className="w-screen text-center 2xl:text-9xl sm:text-8xl text-6xl font-poppins font-extralight">Projects</h1>
             <ItemRow img={typeFitness} headline={'typeFitness'} reverse={false} bgColor={'black'} />
             <ItemRow img={messangerClone} headline={'Messanger Clone'} reverse={true} bgColor={'white'} />
