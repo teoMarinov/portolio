@@ -8,7 +8,7 @@ const Navbar = ({ open, setOpen }) => {
 
   return (
     <>
-      <div className="hidden z-50 lg:flex bg-stone-900 bg-opacity-15 fixed p-3 px-5 w-full justify-between">
+      <div className="hidden z-50 lg:flex fixed p-3 px-5 w-full justify-between">
         <span className="gap-x-8 flex">
           <Button text={'Home'} open={open} setOpen={setOpen} />
           <Button text={'About me'} open={open} setOpen={setOpen} />
