@@ -4,23 +4,39 @@ import leetcode_cheatsheet from '../../assets/Projects/leetcode_cheatsheet.png'
 
 const Projects = () => {
     return (
-        <div className=''>
-            <div className='flex lg:flex-row items-center md:gap-y-8 flex-col'>
-                <h1 className='flex items-center  2xl:text-7xl xl:text-6xl lg:text-5xl text-7xl font-poppins font-semibold ml-10'>typeFitness</h1>
-                <img src={typeFitness} alt="type-fitness" className='lg:scale-[65%] lg:-translate-x-36' />
+        <div className='flex flex-col gap-y-20'>
+            <h1 className="w-screen text-center text-9xl font-poppins font-extralight">Projects</h1>
+
+            <div className='flex lg:flex-row items-center justify-around md:gap-y-8 flex-col'>
+                <div>
+                    <h1 className='flex items-center 2xl:text-7xl xl:text-6xl lg:text-5xl text-7xl font-poppins font-semibold'>typeFitness</h1>
+                </div>
+                <div className='lg:w-2/3 w-full'>
+                    <img src={typeFitness} alt="type-fitness" />
+                </div>
             </div>
-            <div className='flex max:w-screen -translate-x-80'>
-                <img src={messangerClone} alt="messanger-clone" className='scale-[65%]' />
-                <h1 className='flex items-center text-center text-7xl font-poppins font-semibold -translate-x-48'>Messangar Clone</h1>
+            <div className='flex lg:flex-row items-center justify-around gap-x-5 md:gap-y-8 flex-col-reverse'>
+                <div className='lg:w-2/3 w-full'>
+                    <img src={messangerClone} alt="type-fitness" />
+                </div>
+                <div className='w-96'>
+                    <h1 className='flex items-center text-center 2xl:text-7xl xl:text-6xl lg:text-5xl text-7xl font-poppins font-semibold'>Messenger Clone</h1>
+                </div>
             </div>
-            <div className='flex w-screen'>
-                <h1 className='flex flex-col justify-center text-7xl font-poppins font-semibold ml-10'>LeetCode_
-                    <span className="block text-transparent bg-clip-text bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-400 to-violet-700">CheatSheet</span>
-                </h1>
-                <img src={leetcode_cheatsheet} alt="type-fitness" className='scale-[.65] -translate-x-36' />
+            <div className='flex lg:flex-row items-center justify-around gap-x-5 md:gap-y-8 flex-col'>
+                <div className='w-96'>
+                    <h1 className='flex flex-col items-center 2xl:text-7xl xl:text-6xl lg:text-5xl text-7xl font-poppins font-semibold'>LeetCode_
+                        <span className="block text-transparent bg-clip-text bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-400 to-violet-700">CheatSheet</span>
+                    </h1>
+                </div>
+                <div className='lg:w-2/3 w-full'>
+                    <img src={leetcode_cheatsheet} alt="type-fitness" />
+                </div>
             </div>
+
         </div>
     )
 }
 
 export default Projects
+
