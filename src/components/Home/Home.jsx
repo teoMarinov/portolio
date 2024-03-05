@@ -1,6 +1,7 @@
 import Clickable from "../Clickable";
 import { FaGithub } from "react-icons/fa";
 import { GrDocumentDownload } from "react-icons/gr";
+import cv from '../../assets/TeodorMarinovCV.pdf'
 
 import picture from "../../assets/Me.png";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
@@ -36,7 +37,7 @@ const Home = () => {
                             <span className="flex items-center gap-x-2">
                                 <GrDocumentDownload size={26} />
                                 <Clickable textColor={'text-gray-100'} lineColor={'bg-gray-100'}>
-                                <p className="lg:text-2xl md:text-5xl text-2xl">Download my CV</p>
+                                <a href={cv} download="Tedodor Marinov Resume" className="lg:text-2xl md:text-5xl text-2xl">Download my CV</a>
                                 </Clickable>
                             </span>
                         </div>
