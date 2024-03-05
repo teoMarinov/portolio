@@ -44,7 +44,7 @@ const ContactForm = () => {
 
 
     return (
-        <form className="flexflex-col w-10/12 px-44 " onSubmit={handleSubmit}>
+        <form className="lg:w-10/12 w-screen lg:px-44 px-4" onSubmit={handleSubmit}>
             <input type="text" className="hidden" onChange={(e) => setHoney(e.target.value)} />
             <Input label="Name" placeholder="Enter your name" error={errors.name} onChange={(val) => setName(val)} />
             <Input label="Email" placeholder="Enter your email" error={errors.email} onChange={(val) => setEmail(val)} />
