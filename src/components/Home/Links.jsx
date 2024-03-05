@@ -5,7 +5,7 @@ const Links = ({ children, text, link, onClick = () => { } }) => {
       {children}
       <div className="group cursor-pointer">
         <a
-          className="text-gray-100 text-2xl transition-all group-hover:-translate-y-2 block"
+          className="text-gray-100 md:text-5xl text-2xl transition-all group-hover:-translate-y-2 block"
           onClick={(e) => {
             onClick();
             e.stopPropagation();

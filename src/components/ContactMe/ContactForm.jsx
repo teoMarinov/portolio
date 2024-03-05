@@ -44,12 +44,12 @@ const ContactForm = () => {
 
 
     return (
-        <form className="lg:w-10/12 w-screen lg:px-44 px-4" onSubmit={handleSubmit}>
+        <form className="lg:w-10/12 w-screen xl:px-44 px-4" onSubmit={handleSubmit}>
             <input type="text" className="hidden" onChange={(e) => setHoney(e.target.value)} />
             <Input label="Name" placeholder="Enter your name" error={errors.name} onChange={(val) => setName(val)} />
             <Input label="Email" placeholder="Enter your email" error={errors.email} onChange={(val) => setEmail(val)} />
             <TextArea label="Message" placeholder="Enter your message" error={errors.message} onChange={(val) => setMessage(val)} />
-            <button type="submit" className="text-gray-300 hover:text-gray-200 w-full h-12 rounded-md transition-all duration-200 hover:border-gray-500 border border-gray-600 " >Email me</button>
+            <button type="submit" className="text-gray-300 hover:text-gray-200 w-full xl:h-12 lg:h-20 h-12 rounded-md transition-all duration-200 hover:border-gray-500 border border-gray-600 " >Send Email Directly</button>
 
         </form>
     )
