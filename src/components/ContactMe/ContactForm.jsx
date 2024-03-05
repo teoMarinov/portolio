@@ -1,8 +1,11 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Input from "./Input";
 import TextArea from "./TextArea";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+
+    const form = useRef();
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -14,7 +17,8 @@ const ContactForm = () => {
         message: ''
     });
 
-    const handleSubmit = (e) => {
+    const sendEmail = (e) => {
+
         e.preventDefault();
 
         if (honey) return;
@@ -38,17 +42,30 @@ const ContactForm = () => {
         if (errors.name || errors.email || errors.message) return;
 
 
-
-        console.log({ name, email, message });
+        setName('')
+        setEmail('')
+        setMessage('')
+        emailjs
+            .sendForm('service_dctgdo5', 'template_pizat4w', form.current, {
+                publicKey: 'XAdBwN04OJvL4nPkH',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
     }
 
 
     return (
-        <form className="lg:w-10/12 w-screen xl:px-44 px-4" onSubmit={handleSubmit}>
+        <form className="lg:w-10/12 w-screen xl:px-44 px-4" ref={form} onSubmit={sendEmail}>
             <input type="text" className="hidden" onChange={(e) => setHoney(e.target.value)} />
-            <Input label="Name" placeholder="Enter your name" error={errors.name} onChange={(val) => setName(val)} />
-            <Input label="Email" placeholder="Enter your email" error={errors.email} onChange={(val) => setEmail(val)} />
-            <TextArea label="Message" placeholder="Enter your message" error={errors.message} onChange={(val) => setMessage(val)} />
+            <Input name='user_name' label="Name" placeholder="Enter your name" error={errors.name} value={name} onChange={(val) => setName(val)} />
+            <Input name="user_email" label="Email" placeholder="Enter your email" error={errors.email} value={email} onChange={(val) => setEmail(val)} />
+            <TextArea name="message" label="Message" placeholder="Enter your message" error={errors.message} value={message} onChange={(val) => setMessage(val)} />
             <button type="submit" className="text-gray-300 hover:text-gray-200 w-full xl:h-12 lg:h-20 h-12 rounded-md transition-all duration-200 hover:border-gray-500 border border-gray-600 " >Send Email Directly</button>
 
         </form>
