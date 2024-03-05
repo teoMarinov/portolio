@@ -42,15 +42,16 @@ const ContactForm = () => {
         if (errors.name || errors.email || errors.message) return;
 
 
-        setName('')
-        setEmail('')
-        setMessage('')
+
         emailjs
             .sendForm('service_dctgdo5', 'template_pizat4w', form.current, {
                 publicKey: 'XAdBwN04OJvL4nPkH',
             })
             .then(
                 () => {
+                    setName('')
+                    setEmail('')
+                    setMessage('')
                     console.log('SUCCESS!');
                 },
                 (error) => {
