@@ -1,9 +1,10 @@
 import ContactForm from "./ContactForm"
 import ContactList from "./ContactList"
+import {Element} from 'react-scroll';
 
 const ContactMe = () => {
   return (
-    <div className="font-poppins h-full w-screen pb-10 bg-neutral-800 text-gray-400">
+    <Element name='contactMe' className="font-poppins h-full w-screen pb-10 bg-neutral-800 text-gray-400">
       <div className="w-full">
         <h1 className="text-center py-20 sm:text-8xl text-6xl font-extralight ">Contact me:</h1>
       </div>
@@ -11,7 +12,7 @@ const ContactMe = () => {
        <ContactForm />
        <ContactList />
       </div>
-    </div>
+    </Element>
   )
 }
 
