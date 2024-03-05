@@ -1,4 +1,4 @@
-import Links from "./Links";
+import Clickable from "../Clickable";
 import { FaGithub } from "react-icons/fa";
 import { GrDocumentDownload } from "react-icons/gr";
 
@@ -19,12 +19,26 @@ const Home = () => {
                             </span>
                         </h1>
                         <div className="flex lg:flex-row flex-col xl:justify-start justify-center items-center gap-10 text-gray-100 w-full mt-16">
-                            <Links link="https://github.com/teoMarinov" text="GitHub">
+                            <span className="flex items-center">
                                 <FaGithub size={26} className="w-10" />
-                            </Links>
-                            <Links link="" text="Download my CV">
-                                <GrDocumentDownload size={26} className="w-10" />
-                            </Links>
+                                <Clickable textColor={'text-gray-00'} lineColor={'bg-gray-100'}>
+                                    <a onClick={(e) => {
+                                        e.stopPropagation();
+                                    }}
+                                    className="lg:text-2xl md:text-5xl text-2xl  "
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href={'https://github.com/teoMarinov'}>GitHub
+
+                                    </a>
+                                </Clickable>
+                            </span>
+                            <span className="flex items-center gap-x-2">
+                                <GrDocumentDownload size={26} />
+                                <Clickable textColor={'text-gray-100'} lineColor={'bg-gray-100'}>
+                                <p className="lg:text-2xl md:text-5xl text-2xl">Download my CV</p>
+                                </Clickable>
+                            </span>
                         </div>
                     </span>
                 </div>
