@@ -31,7 +31,7 @@ const MobileDrawer = ({ children, open, setOpen }) => {
     return (
         <>
             <div>
-                <button onClick={clickHandler} className={clsx("z-50 size-14 rounded-full p-2 relative m-4 transition-colors", move ? 'bg-blue-600' : 'bg-stone-700')}>
+                <button onClick={clickHandler} className={clsx("z-50 size-14 rounded-full p-2 relative m-4 transition-colors xl:hover:bg-blue-600", move ? 'bg-blue-600' : 'bg-stone-700')}>
                     <div className={clsx("absolute rounded-md top-[49%] right-[21.9%] transition-all h-[3px] w-8 bg-gray-100 duration-300 ", move ? "translate-y-0" : "-translate-y-2", rotate && 'rotate-45')}></div>
                     <div className={clsx("absolute rounded-md top-[49%] right-[21.9%] transition-all h-[3px] w-8 bg-gray-100 duration-300", rotate && ' rotate-45')}></div>
                     <div className={clsx("absolute rounded-md top-[49%] right-[21.9%] transition-all h-[3px] w-8 bg-gray-100 duration-300", move ? "-translate-y-0" : "translate-y-2", rotate && '-rotate-45')}></div>
