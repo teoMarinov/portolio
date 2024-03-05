@@ -2,12 +2,14 @@ import Clickable from "../Clickable";
 import { FaGithub } from "react-icons/fa";
 import { GrDocumentDownload } from "react-icons/gr";
 import cv from '../../assets/TeodorMarinovCV.pdf'
-
 import picture from "../../assets/Me.png";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
+import {Element} from 'react-scroll';
+
+
 const Home = () => {
     return (
-        <div className="sm:mb-0 mb-44 flex flex-col md:justify-around items-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-300 to-gray-400 h-full min-h-screen ">
+        <Element name="home" className="sm:mb-0 mb-44 flex flex-col md:justify-around items-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-300 to-gray-400 h-full min-h-screen ">
             <div className="items-center xl:translate-y-28 flex px-12">
                 <div className="translate-y-8 flex flex-col w-full h-full justify-center items-center">
                     <span className="md:h-full h-screen flex flex-col justify-center">
@@ -50,7 +52,7 @@ const Home = () => {
             <div className="hidden border-4 border-gray-100 w-12 h-24 rounded-full xl:flex items-center xl:translate-y-0 translate-y-10 justify-center">
                 <MdOutlineKeyboardDoubleArrowDown size={42} className="text-gray-100" />
             </div>
-        </div>
+        </Element>
     )
 }
 
