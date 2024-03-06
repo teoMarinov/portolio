@@ -4,8 +4,8 @@ import { GrDocumentDownload } from "react-icons/gr";
 import cv from '../../assets/TeodorMarinovCV.pdf'
 import picture from "../../assets/Me.png";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
-import {Element} from 'react-scroll';
-
+import { Element } from 'react-scroll';
+import { motion } from "framer-motion";
 
 const Home = () => {
     return (
@@ -13,45 +13,81 @@ const Home = () => {
             <div className="items-center xl:translate-y-28 flex px-12">
                 <div className="translate-y-8 flex flex-col w-full h-full justify-center items-center">
                     <span className="md:h-full h-screen flex flex-col justify-center">
-                        <h1 className="lg:text-8xl xl:text-start lg:text-center md:mt-0 m-0 sm:text-9xl text-6xl w-fit font-bold whitespace-nowrap">
+                        <motion.h1
+                            initial={{ y: ['100vh'] }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.33, delay: .4 }}
+                            className="lg:text-8xl sm:text-9xl text-6xl font-bold xl:text-start lg:text-center md:mt-0 m-0 w-fit whitespace-nowrap"
+                        >
                             Teodor Marinov
-                            <span
-                                className="block text-transparent my-10 bg-clip-text bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-400 to-violet-700"
+                        </motion.h1>
+                        <motion.h1
+                            initial={{ y: ['100vh'] }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.33, delay: .5 }}
+                            className="lg:text-8xl sm:text-9xl text-6xl font-bold block text-transparent my-10 bg-clip-text bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-400 to-violet-700"
+                        >
+                            A Junior Developer
+                        </motion.h1>
+                        <div className="flex lg:flex-row flex-col xl:justify-start justify-center items-center gap-10 text-gray-100 w-full lg:mt-2 mt-16">
+                            <motion.span
+                                initial={{ y: ['100vh'] }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.2, delay: .9 }}
+                                className="flex items-center"
                             >
-                                A Junior Developer
-                            </span>
-                        </h1>
-                        <div className="flex lg:flex-row flex-col xl:justify-start justify-center items-center gap-10 text-gray-100 w-full mt-16">
-                            <span className="flex items-center">
                                 <FaGithub size={26} className="w-10" />
                                 <Clickable textColor={'text-gray-00'} lineColor={'bg-gray-100'}>
                                     <a onClick={(e) => {
                                         e.stopPropagation();
                                     }}
-                                    className="lg:text-2xl md:text-5xl text-2xl  "
+                                        className="lg:text-2xl md:text-5xl text-2xl  "
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         href={'https://github.com/teoMarinov'}>GitHub
 
                                     </a>
                                 </Clickable>
-                            </span>
-                            <span className="flex items-center gap-x-2">
+                            </motion.span>
+                            <motion.span
+                                initial={{ y: ['100vh'] }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.2, delay: .8 }}
+                                className="flex items-center gap-x-2">
                                 <GrDocumentDownload size={26} />
                                 <Clickable textColor={'text-gray-100'} lineColor={'bg-gray-100'}>
-                                <a href={cv} download="Tedodor Marinov Resume" className="lg:text-2xl md:text-5xl text-2xl">Download my CV</a>
+                                    <a href={cv} download="Tedodor Marinov Resume" className="lg:text-2xl md:text-5xl text-2xl">Download my CV</a>
                                 </Clickable>
-                            </span>
+                            </motion.span>
                         </div>
                     </span>
                 </div>
 
-                <div className="hidden xl:inline ml-16">
-                    <img src={picture} alt="picture" className="w-[60rem] rounded-full" /></div>
+                <motion.div
+                    initial={{ y: ['100vh'] }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: .7 }}
+                    className="hidden xl:inline ml-16"
+                >
+                    <img src={picture} alt="picture" className="w-[60rem] rounded-full" />
+                </motion.div>
             </div>
-            <div className="hidden border-4 border-gray-100 w-12 h-24 rounded-full xl:flex items-center xl:translate-y-0 translate-y-10 justify-center">
-                <MdOutlineKeyboardDoubleArrowDown size={42} className="text-gray-100" />
-            </div>
+            <motion.div
+                initial={{ y: ['100vh'] }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: .7, delay: .4 }}
+                className="hidden border-4 border-gray-100 w-12 h-24 rounded-full xl:flex flex-col items-center xl:translate-y-0 translate-y-10 justify-center overflow-hidden"
+            >
+                <motion.div
+                    animate={{
+                        y: [-70, 70],
+                        opacity: [0, 1, 0]
+                    }}
+                    transition={{ duration: 1.2, repeat: Infinity }}
+                >
+                    <MdOutlineKeyboardDoubleArrowDown size={42} className="text-gray-100" />
+                </motion.div>
+            </motion.div>
         </Element>
     )
 }
