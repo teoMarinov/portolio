@@ -1,13 +1,25 @@
+import { useRef } from "react";
 import SkillsRow from "./SkillsRow"
-import {Element} from 'react-scroll';
+import { Element } from 'react-scroll';
+import { useScroll } from "framer-motion";
+import Heading from "./Headling";
 
 const Skills = () => {
+
+    const ref = useRef(null)
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ['0 1.3', '1.7 1'],
+    })
+
     return (
-        <Element name="skills" className="sm:h-screen h-fit md:my-0 mt-14 mb-44">
-            <h1 className="w-screen text-center 2xl:text-9xl sm:text-8xl text-6xl font-poppins font-extralight sm:mb-16 mb-8">Skills</h1>
-            <SkillsRow />
-            <SkillsRow />
-        </Element>
+        <div ref={ref}>
+            <Element name="skills" className="sm:h-screen h-fit md:my-0 mt-14 mb-44">
+                <Heading />
+                <SkillsRow scroll={scrollYProgress}/>
+            </Element>
+        </div>
     )
 }
 
