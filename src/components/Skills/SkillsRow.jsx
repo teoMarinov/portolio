@@ -24,8 +24,8 @@ import { motion, useTransform } from "framer-motion"
 
 const SkillsRow = ({ scroll }) => {
 
-    const scrollLeft = useTransform(scroll, [0, 1], ["175%", "-110%"])
-    const scrollRight = useTransform(scroll, [0, 1], ["-200%", "110%"])
+    const scrollLeft = useTransform(scroll, [0, 1], ["165%", "-110%"])
+    const scrollRight = useTransform(scroll, [0, 1], ["-205%", "110%"])
 
     return (
         <>
@@ -50,8 +50,10 @@ const SkillsRow = ({ scroll }) => {
                 style={{
                     translateX: scrollRight
                 }}
+                
                 className="flex gap-x-5 2xl:size-48 md:size-40 sm:size-32 size-20 2xl:w-full md:w-screen sm:w-full w-screen mb-16"
             >
+                <img src={tailwind} alt="tailwind" className="mt-2" />
                 <img src={chakraUi} alt="chakraUI" className="mt-2" />
                 <img src={shadcn} alt="shadcn" className="mt-2 rounded-lg" />
                 <img src={firebase} alt="firebase" className="mt-2" />
