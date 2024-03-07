@@ -14,8 +14,8 @@ const ItemRow = ({ img, headline, reverse, bgColor }) => {
     })
 
 
-    const scrollLeft = useTransform(scrollYProgress, [0, 1], ["100%", "0%"])
-    const scrollRight = useTransform(scrollYProgress, [0, 1], ["-100", "0%"])
+    const scrollLeft = useTransform(scrollYProgress, [0, 1], ["50%", "0%"])
+    const scrollRight = useTransform(scrollYProgress, [0, 1], ["-50", "0%"])
     const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1])
 
     return (
@@ -27,7 +27,7 @@ const ItemRow = ({ img, headline, reverse, bgColor }) => {
                         scale: scale
                     }}
                     className="sm:w-96 text-center">
-                    <h1 className='flex items-center justify-center 2xl:text-7xl xl:text-6xl lg:text-5xl md:4xl sm:text-6xl text-3xl font-poppins font-light lg:mb-0 mb-5 break-words'>{headline}</h1>
+                    <h1 className='flex items-center justify-center 2xl:text-7xl xl:text-6xl lg:text-5xl md:4xl sm:text-6xl text-3xl font-poppins font-light lg:mb-0 mb-5 break-words '>{headline}</h1>
                 </motion.div>
                 <motion.div
                     style={{
