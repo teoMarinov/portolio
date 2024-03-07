@@ -33,7 +33,7 @@ const Home = () => {
                                 <motion.h1
                                     initial={{ y: ['100vh'] }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.33, delay: .4 }}
+                                    transition={{ duration: 0.3, delay: 1, ease: 'circOut' }}
                                     className="lg:text-8xl sm:text-9xl text-6xl font-bold xl:text-start lg:text-center md:mt-0 m-0 w-fit whitespace-nowrap"
                                 >
                                     Teodor Marinov
@@ -41,7 +41,7 @@ const Home = () => {
                                 <motion.h1
                                     initial={{ y: ['100vh'] }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.33, delay: .5 }}
+                                    transition={{ duration: 0.3, delay: 1.1, ease: 'circOut' }}
                                     className="lg:text-8xl sm:text-9xl text-6xl font-bold block text-transparent my-10 bg-clip-text bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-400 to-violet-700"
                                 >
                                     A Junior Developer
@@ -50,7 +50,7 @@ const Home = () => {
                                     <motion.span
                                         initial={{ y: ['100vh'] }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.2, delay: .9 }}
+                                        transition={{ duration: 0.3, delay: 1.5, ease: 'circOut' }}
                                         className="flex items-center"
                                     >
                                         <FaGithub size={26} className="w-10" />
@@ -69,7 +69,7 @@ const Home = () => {
                                     <motion.span
                                         initial={{ y: ['100vh'] }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.2, delay: .8 }}
+                                        transition={{ duration: 0.3, delay: 1.4, ease: 'circOut' }}
                                         className="flex items-center gap-x-2">
                                         <GrDocumentDownload size={26} />
                                         <Clickable textColor={'text-gray-100'} lineColor={'bg-gray-100'}>
@@ -83,7 +83,7 @@ const Home = () => {
                         <motion.div
                             initial={{ y: ['100vh'] }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.4, delay: .7 }}
+                            transition={{ duration: 0.4, delay: 1.3, ease: 'circOut' }}
                             className="hidden xl:inline ml-16"
                         >
                             <img src={picture} alt="picture" className="w-[60rem] rounded-full" />
@@ -92,7 +92,7 @@ const Home = () => {
                     <motion.div
                         initial={{ y: ['100vh'] }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: .7, delay: .4 }}
+                        transition={{ duration: .3, delay: 1.1, ease: 'circOut' }}
                         className="hidden border-4 border-gray-100 w-12 h-24 rounded-full xl:flex flex-col items-center xl:translate-y-0 translate-y-10 justify-center overflow-hidden"
                     >
                         <motion.div
