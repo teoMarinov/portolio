@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import { motion, useScroll } from "framer-motion";
 
-const Heading = () => {
+const Heading = ({text}) => {
 
     const ref = useRef(null)
 
@@ -19,7 +19,7 @@ const Heading = () => {
                     opacity: scrollYProgress
                 }}
                 className="w-screen text-center 2xl:text-9xl sm:text-8xl text-6xl font-poppins font-extralight sm:mb-16 mb-8">
-                Skills
+                {text}
             </motion.h1>
         </div>
 

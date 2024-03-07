@@ -2,7 +2,7 @@ import { useRef } from "react";
 import SkillsRow from "./SkillsRow"
 import { Element } from 'react-scroll';
 import { useScroll } from "framer-motion";
-import Heading from "./Headling";
+import Heading from "../Headling";
 
 const Skills = () => {
 
@@ -16,7 +16,7 @@ const Skills = () => {
     return (
         <div ref={ref}>
             <Element name="skills" className="sm:h-screen h-fit md:my-0 mt-14 mb-44">
-                <Heading />
+                <Heading text="Skill"/>
                 <SkillsRow scroll={scrollYProgress}/>
             </Element>
         </div>

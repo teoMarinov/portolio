@@ -24,6 +24,8 @@ import { motion, useTransform } from "framer-motion"
 
 const SkillsRow = ({ scroll }) => {
 
+    
+
     const scrollLeft = useTransform(scroll, [0, 1], ["165%", "-110%"])
     const scrollRight = useTransform(scroll, [0, 1], ["-205%", "110%"])
 
