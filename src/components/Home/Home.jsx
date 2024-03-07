@@ -97,7 +97,7 @@ const Home = () => {
                     >
                         <motion.div
                             animate={{
-                                y: [-70, 70],
+                                y: [-60, 60],
                                 opacity: [0, 1, 0]
                             }}
                             transition={{ duration: 1.6, repeat: Infinity }}
