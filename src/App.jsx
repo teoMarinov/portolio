@@ -4,21 +4,24 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import ContactMe from "./components/ContactMe/ContactMe";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 export default function App() {
 
 
   return (
-    <div className=" w-screen overflow-x-hidden">
-   
-      <Navbar/>
+    <ReactLenis root>
+      <div className=" w-screen overflow-x-hidden">
 
-      <Home  />
-      <AboutMe />
+        <Navbar />
 
-      <Skills />
-      <Projects />
-      <ContactMe />
-    </div>
+        <Home />
+        <AboutMe />
+        <Skills />
+        <Projects />
+        <ContactMe />
+        
+      </div>
+    </ReactLenis>
   )
 }

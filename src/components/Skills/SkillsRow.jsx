@@ -44,13 +44,14 @@ const SkillsRow = ({ scroll }) => {
                 <img src={reactNative} alt="react-native" className="mt-2" />
                 <img src={php} alt="php" className="" />
                 <img src={sql} alt="sql" className="" />
+                <img src={nodeJs} alt="nodeJs" className="mt-4" />
                 <img src={tailwind} alt="tailwind" className="mt-2" />
             </motion.div>
             <motion.div
                 style={{
                     translateX: scrollRight
                 }}
-                
+
                 className="flex gap-x-5 2xl:size-48 md:size-40 sm:size-32 size-20 2xl:w-full md:w-screen sm:w-full w-screen mb-16"
             >
                 <img src={tailwind} alt="tailwind" className="mt-2" />
@@ -64,7 +65,6 @@ const SkillsRow = ({ scroll }) => {
                 <img src={framerMotion} alt="framer-motion" className="mt-2" />
                 <img src={ajax} alt="ajax" className="mt-4" />
                 <img src={webSocket} alt="webSocket" className="mt-4" />
-                <img src={nodeJs} alt="nodeJs" className="mt-4" />
             </motion.div>
         </>
     )

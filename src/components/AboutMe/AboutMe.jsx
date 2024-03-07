@@ -9,10 +9,10 @@ const AboutMe = () => {
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ['0 1', '1 1'],
+        offset: ['0 1', '1 0.65'],
     })
 
-    const headingVal = useTransform(scrollYProgress, [0, 1,], ["-80%", "0%"])
+    const headingVal = useTransform(scrollYProgress, [0, 1], ["-80%", "0%"])
 
     const paragraphVal = useTransform(scrollYProgress, [0, 1], ["80%", "0%"])
 
