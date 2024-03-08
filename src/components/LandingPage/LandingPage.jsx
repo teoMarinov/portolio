@@ -8,8 +8,9 @@ import { Element } from 'react-scroll';
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link } from 'react-scroll';
+import { Link as RLink } from "react-router-dom";
 
-const Home = () => {
+const LandingPage = () => {
 
     const ref = useRef(null)
 
@@ -27,7 +28,8 @@ const Home = () => {
                     style={{
                         translateY: scroll
                     }}
-                    className="sm:mb-0 mb-44 flex flex-col overflow-hidden md:justify-around items-center h-full min-h-screen" >
+                    className="sm:mb-0 mb-44 flex flex-col overflow-hidden md:justify-around items-center h-full min-h-screen"
+                >
                     <div className="items-center xl:translate-y-28 flex px-12">
                         <div className="translate-y-8 flex flex-col w-full h-full justify-center items-center">
                             <span className="md:h-full h-screen flex flex-col justify-center">
@@ -37,7 +39,7 @@ const Home = () => {
                                     transition={{ duration: 0.3, delay: 1, ease: 'circOut' }}
                                     className="lg:text-8xl sm:text-9xl text-6xl font-bold xl:text-start lg:text-center md:mt-0 m-0 w-fit whitespace-nowrap"
                                 >
-                                    Teodor Marinov
+                                   <RLink to={'/skillz'}>Teodor Marinov</RLink> 
                                 </motion.h1>
                                 <motion.h1
                                     initial={{ y: ['100vh'] }}
@@ -114,4 +116,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default LandingPage
