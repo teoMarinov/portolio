@@ -26,14 +26,14 @@ const SkillsRow = ({ scroll }) => {
 
     
 
-    const scrollLeft = useTransform(scroll, [0, 1], ["165%", "-110%"])
-    const scrollRight = useTransform(scroll, [0, 1], ["-205%", "110%"])
+    const scrollLeft = useTransform(scroll, [0, 1], ["100%", "-100%"])
+    const scrollRight = useTransform(scroll, [0, 1], ["-155%", "50%"])
 
     return (
         <>
             <motion.div
                 style={{
-                    translateX: scrollLeft
+                    translateX: scrollLeft,
                 }}
                 className="flex gap-x-5 2xl:size-48 md:size-40 sm:size-32 size-20 2xl:w-full md:w-screen sm:w-full w-screen mb-16"
             >

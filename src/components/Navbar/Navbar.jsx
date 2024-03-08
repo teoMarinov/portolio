@@ -8,7 +8,6 @@ import { motion } from 'framer-motion'
 const Navbar = () => {
 
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [open, setOpen] = useState('Home');
 
   return (
     <>
@@ -23,7 +22,7 @@ const Navbar = () => {
             transition={{ duration: 0.6, delay: 0 }}
           >
             <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} isDynamic={true}>
-              <Button text={'Home'} open={open} textColor={'white'} onClick={() => setOpen('Home')} />
+              <Button text={'Home'} open={open} textColor={'white'} />
             </Link>
           </motion.div>
           <motion.div
@@ -32,7 +31,7 @@ const Navbar = () => {
             transition={{ duration: 0.6, delay: .4 }
             }>
             <Link activeClass="active" to="aboutMe" spy={true} smooth={true} duration={500}>
-              <Button text={'About me'} open={open} textColor={'white'} onClick={() => setOpen('About me')} />
+              <Button text={'About me'} open={open} textColor={'white'} />
             </Link>
           </motion.div>
         </span>
@@ -43,7 +42,7 @@ const Navbar = () => {
             transition={{ duration: 0.6, delay: .2 }
             }>
             <Link activeClass="active" to="skills" offset={-100} spy={true} smooth={true} duration={500} >
-              <Button text={'Skills'} open={open} textColor={'white'} onClick={() => setOpen('Skills')} />
+              <Button text={'Skills'} open={open} textColor={'white'} />
             </Link>
           </motion.div>
           <motion.div
@@ -52,7 +51,7 @@ const Navbar = () => {
             transition={{ duration: 0.6, delay: .8 }
             }>
             <Link activeClass="active" to="projects" spy={true} smooth={true} duration={500} >
-              <Button text={'Projects'} open={open} textColor={'white'} onClick={() => setOpen('Projects')} />
+              <Button text={'Projects'} open={open} textColor={'white'} />
             </Link>
           </motion.div>
           <motion.div
@@ -61,7 +60,7 @@ const Navbar = () => {
             transition={{ duration: 0.6, delay: .6 }
             }>
             <Link activeClass="active" to="contactMe" offset={60} spy={true} smooth={true} duration={500} >
-              <Button text={'Contact me'} open={open} textColor={'white'} onClick={() => setOpen('Contact me')} />
+              <Button text={'Contact me'} open={open} textColor={'white'} />
             </Link>
           </motion.div>
         </span>
@@ -71,19 +70,19 @@ const Navbar = () => {
           <div className="flex items-center justify-center h-full" >
             <div className={clsx("flex flex-col gap-y-11 whitespace-nowrap transition-all delay-300", drawerOpen ? "scale-100" : "scale-0")}>
               <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} >
-                <Button text={'Home'} open={open} textColor={'white'} onClick={() => setOpen('Home')} />
+                <Button text={'Home'} open={open} textColor={'white'} />
               </Link>
               <Link activeClass="active" to="aboutMe" spy={true} smooth={true} duration={500} >
-                <Button text={'About me'} open={open} textColor={'white'} onClick={() => setOpen('About me')} />
+                <Button text={'About me'} open={open} textColor={'white'} />
               </Link>
               <Link activeClass="active" to="skills" spy={true} smooth={true} duration={500} >
-                <Button text={'Skills'} open={open} textColor={'white'} onClick={() => setOpen('Skills')} />
+                <Button text={'Skills'} open={open} textColor={'white'} />
               </Link>
               <Link activeClass="active" to="projects" spy={true} smooth={true} duration={500} >
-                <Button text={'Projects'} open={open} textColor={'white'} onClick={() => setOpen('Projects')} />
+                <Button text={'Projects'} open={open} textColor={'white'} />
               </Link>
               <Link activeClass="active" to="contactMe" spy={true} smooth={true} duration={500} >
-                <Button text={'Contact me'} open={open} textColor={'white'} onClick={() => setOpen('Contact me')} />
+                <Button text={'Contact me'} open={open} textColor={'white'} />
               </Link>
             </div>
           </div>

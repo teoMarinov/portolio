@@ -18,7 +18,7 @@ const LoadingScreen = () => {
             animate={{
               width: 'fit-content'
             }}
-            transition={{ duration: 0.2, delay: .4 }}
+            transition={{ duration: 0.2, delay: .4, ease: 'easeInOut' }}
             className="bg-zinc-800 overflow-hidden"
           >
             Hi!
@@ -32,7 +32,7 @@ const LoadingScreen = () => {
             animate={{
               width: 'fit-content'
             }}
-            transition={{ duration: 0.2, delay: 1 }}
+            transition={{ duration: 0.2, delay: 1, ease: 'easeInOut'  }}
             className="bg-zinc-800 overflow-hidden"
           >
             Hello!
@@ -46,7 +46,7 @@ const LoadingScreen = () => {
             animate={{
               width: 'fit-content'
             }}
-            transition={{ duration: 0.3, delay: 1.7 }}
+            transition={{ duration: 0.3, delay: 1.7, ease: 'easeInOut'  }}
             className="bg-zinc-800 overflow-hidden"
           >
             Welcome!
