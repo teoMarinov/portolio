@@ -26,8 +26,9 @@ const SkillsRow = ({ scroll }) => {
 
     
 
-    const scrollLeft = useTransform(scroll, [0, 1], ["100%", "-100%"])
-    const scrollRight = useTransform(scroll, [0, 1], ["-155%", "50%"])
+    const scrollLeft = useTransform(scroll, [0, 1], ["95%", "-65%"])
+
+    const scrollRight = useTransform(scroll, [0, 1], ["-130%", "50%"])
 
     return (
         <>
@@ -38,14 +39,14 @@ const SkillsRow = ({ scroll }) => {
                 className="flex gap-x-5 2xl:size-48 md:size-40 sm:size-32 size-20 2xl:w-full md:w-screen sm:w-full w-screen mb-16"
             >
                 <img src={typeScript} alt="type-script" />
-                <img src={javaScript} alt="java-script" className="" />
-                <img src={html} alt="html" className="" />
-                <img src={css} alt="css" className="" />
+                <img src={javaScript} alt="java-script"/>
+                <img src={html} alt="html" />
+                <img src={css} alt="css" />
                 <img src={nextJs} alt="nextJs" className="mt-2" />
-                <img src={react} alt="react" className="" />
+                <img src={react} alt="react" />
                 <img src={reactNative} alt="react-native" className="mt-2" />
-                <img src={php} alt="php" className="" />
-                <img src={sql} alt="sql" className="" />
+                <img src={php} alt="php" />
+                <img src={sql} alt="sql" />
                 <img src={nodeJs} alt="nodeJs" className="mt-4" />
                 <img src={tailwind} alt="tailwind" className="mt-2" />
             </motion.div>
