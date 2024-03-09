@@ -6,8 +6,14 @@ import chakraUi from "../../../assets/SkillsIcons/chakraUI.png"
 
 const TypeFitness = () => {
     const description = [
-        '1',
-        '2'
+        'Make workout plans',
+        'Write the weight and reps for each set',
+        'Keep track of your exercise progress',
+        "Lookup and save diffrerent food's macros",
+        "Combine foods into meals",
+        "Save daily calories intake",
+        "View macros logs",
+        "Make a diet plan for the whole week",
     ]
     return (
         <ProjectInfoTamplate 

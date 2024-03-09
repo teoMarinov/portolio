@@ -1,14 +1,16 @@
 import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa";
 import { CiLink } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => {
+  const navigate = useNavigate()
 
   return (
 
-    <div className="flex flex-col justify-between h-screen">
+    <div className="flex flex-col justify-between h-screen fixed">
 
-      <div className="w-screen border-b border-gray-300 shadow-md p-9 font-poppins">
+      <div onClick={() => navigate('/')} className="w-screen border-b border-gray-300 shadow-md p-9 font-poppins">
         <motion.h1
           initial={{
             width: 0
@@ -16,7 +18,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
           animate={{
             width: 'fit-content'
           }}
-          transition={{ duration: 0.4, ease: 'easeIn' }}
+          transition={{ duration: 0.4, delay: 0.05, ease: 'easeIn' }}
           className=" overflow-hidden text-7xl  font-light"
         >
           {title}
@@ -51,16 +53,18 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
         </motion.div>
       </div>
 
-      <div className="h-full p-12 text-2xl">
+      <div className="h-full p-12 text-2xl overflow-auto">
         {description.map((text, index) => (
           <motion.li
             initial={{
+              translateX: '100px',
               opacity: 0
             }}
             animate={{
+              translateX: '0px',
               opacity: 1
             }}
-            transition={{ duration: 0.3, delay: 0.9 + index * 0.2, ease: 'circOut' }}
+            transition={{ duration: 0.2, delay: 0.9 + index * 0.2, ease: 'circOut' }}
 
             key={index}
           >
@@ -74,12 +78,14 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
           {children.map((child, index) => (
             <motion.div
               initial={{
+                translateY: '100px',
                 opacity: 0
               }}
               animate={{
+                translateY: '0px',
                 opacity: 1
               }}
-              transition={{ duration: 0.3, delay: 0.3 * description.length + 0.9 + index * 0.2, ease: 'circOut' }}
+              transition={{ duration: 0.3, delay: 0.2 * description.length + 0.95 + index * 0.1, ease: 'circOut' }}
               key={index}
               className="size-20"
             >

@@ -10,29 +10,36 @@ import TypeFitness from './components/Projects/ProjectInfo/TypeFitness';
 
 export default function App() {
 
-  const [loadingScreen, setLoadingScreen] = useState(true);
+  const [loadingScreen, setLoadingScreen] = useState(false);
   const [allowScroll, setAllowScroll] = useState(false);
 
   const location = useLocation();
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoadingScreen(false);
-  //   }, 3000)
-  //   setTimeout(() => {
-  //     setAllowScroll(true);
-  //   }, 5000)
-  // }, [])
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setLoadingScreen(false);
+      setAllowScroll(true);
+      return
+    }
+    setLoadingScreen(true);
+
+    setTimeout(() => {
+      setLoadingScreen(false);
+    }, 3000)
+    setTimeout(() => {
+      setAllowScroll(true);
+    }, 5000)
+  }, [location.pathname])
 
 
   return (
 
     <ReactLenis root>
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {loadingScreen && <LoadingScreen />}
-      </AnimatePresence> */}
+      </AnimatePresence>
       {
-        // loadingScreen ||
+        loadingScreen ||
         <div className={clsx("w-screen overflow-hidden", allowScroll ? 'h-full' : 'h-screen')}>
           <AnimatePresence mode='wait'>
             <Routes key={location.pathname}>
