@@ -17,7 +17,6 @@ export default function App() {
 
   useEffect(() => {
     if (location.pathname !== "/") {
-      setLoadingScreen(false);
       setAllowScroll(true);
       return
     }
