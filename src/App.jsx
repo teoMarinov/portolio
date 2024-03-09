@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Home from './components/Home';
+import TypeFitness from './components/Projects/ProjectInfo/TypeFitness';
 
 export default function App() {
 
@@ -14,30 +15,31 @@ export default function App() {
 
   const location = useLocation();
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoadingScreen(false);
-    }, 3000)
-    setTimeout(() => {
-      setAllowScroll(true);
-    }, 5000)
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoadingScreen(false);
+  //   }, 3000)
+  //   setTimeout(() => {
+  //     setAllowScroll(true);
+  //   }, 5000)
+  // }, [])
 
-  }, [])
+
   return (
 
     <ReactLenis root>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {loadingScreen && <LoadingScreen />}
-      </AnimatePresence>
+      </AnimatePresence> */}
       {
-        loadingScreen ||
+        // loadingScreen ||
         <div className={clsx("w-screen overflow-hidden", allowScroll ? 'h-full' : 'h-screen')}>
           <AnimatePresence mode='wait'>
             <Routes key={location.pathname}>
               <Route path="/" element={<Home />} />
+              <Route path="/typeFitness" element={<TypeFitness />} />
             </Routes>
           </AnimatePresence>
-          {/* <Home /> */}
         </div>
       }
 

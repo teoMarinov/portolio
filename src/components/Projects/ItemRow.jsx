@@ -4,9 +4,12 @@ import { useRef } from 'react'
 
 import { motion, useTransform, useScroll } from "framer-motion"
 
-const ItemRow = ({ img, headline, reverse, bgColor }) => {
+import { useNavigate } from "react-router-dom"
+
+const ItemRow = ({ img, headline, reverse, bgColor, navTo }) => {
 
     const ref = useRef(null)
+    const navigate = useNavigate()
 
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -34,6 +37,7 @@ const ItemRow = ({ img, headline, reverse, bgColor }) => {
                         translateX: reverse ? scrollRight : scrollLeft,
                         scale: scale
                     }}
+                    onClick={() => navigate(navTo)}
                     className='lg:w-2/3 w-full rounded-lg relative group cursor-pointer overflow-hidden'>
                     <span className={clsx("z-50 group-hover:absolute w-full h-full bg-opacity-15", bgColor === 'white' ? 'text-black bg-gray-600' : 'text-white bg-white')}></span>
                     <img src={img} alt="type-fitness" className="transition-all group-hover:scale-105" />

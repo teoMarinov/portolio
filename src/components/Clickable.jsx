@@ -1,11 +1,11 @@
 
-const Clickable = ({ children, textColor, lineColor}) => {
+const Clickable = ({ children, textColor, lineColor }) => {
   return (
     <span className="flex items-center ">
-      
-      <div className="group cursor-pointer">
+
+      <div className="group cursor-pointer ">
         <div
-          className={`transition-all group-hover:-translate-y-2 block ${textColor}`}
+          className={`transition-all flex items-center group-hover:-translate-y-2 block ${textColor}`}
         >
           {children}
         </div>
