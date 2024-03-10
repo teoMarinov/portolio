@@ -50,7 +50,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: .8 }
             }>
-            <Link activeClass="active" to="projects" spy={true} smooth={true} duration={500} >
+            <Link activeClass="active" to="projects" offset={150} spy={true} smooth={true} duration={500} >
               <Button text={'Projects'} open={open} textColor={'white'} />
             </Link>
           </motion.div>
@@ -78,7 +78,7 @@ const Navbar = () => {
               <Link activeClass="active" to="skills" spy={true} smooth={true} duration={500} >
                 <Button text={'Skills'} open={open} textColor={'white'} />
               </Link>
-              <Link activeClass="active" to="projects" spy={true} smooth={true} duration={500} >
+              <Link activeClass="active" to="projects" offset={150} spy={true} smooth={true} duration={500} >
                 <Button text={'Projects'} open={open} textColor={'white'} />
               </Link>
               <Link activeClass="active" to="contactMe" spy={true} smooth={true} duration={500} >

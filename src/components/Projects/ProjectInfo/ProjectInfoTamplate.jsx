@@ -19,7 +19,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
             width: 'fit-content'
           }}
           transition={{ duration: 0.4, delay: 0.05, ease: 'easeIn' }}
-          className=" overflow-hidden text-7xl  font-light"
+          className=" overflow-hidden text-7xl h-20 font-light"
         >
           {title}
         </motion.h1>

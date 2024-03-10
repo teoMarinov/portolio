@@ -19,12 +19,13 @@ import mysql from '../../assets/SkillsIcons/mysql.svg'
 import ajax from "../../assets/SkillsIcons/ajax.png"
 import webSocket from "../../assets/SkillsIcons/websocket.png"
 import nodeJs from "../../assets/SkillsIcons/nodeJS.png"
+import pusher from "../../assets/SkillsIcons/pusher.svg"
 
 import { motion, useTransform } from "framer-motion"
 
 const SkillsRow = ({ scroll }) => {
 
-    
+
 
     const scrollLeft = useTransform(scroll, [0, 1], ["95%", "-65%"])
 
@@ -39,7 +40,7 @@ const SkillsRow = ({ scroll }) => {
                 className="flex gap-x-5 2xl:size-48 md:size-40 sm:size-32 size-20 2xl:w-full md:w-screen sm:w-full w-screen mb-16"
             >
                 <img src={typeScript} alt="type-script" />
-                <img src={javaScript} alt="java-script"/>
+                <img src={javaScript} alt="java-script" />
                 <img src={html} alt="html" />
                 <img src={css} alt="css" />
                 <img src={nextJs} alt="nextJs" className="mt-2" />
@@ -68,6 +69,8 @@ const SkillsRow = ({ scroll }) => {
                 <img src={framerMotion} alt="framer-motion" className="mt-2" />
                 <img src={ajax} alt="ajax" className="mt-4" />
                 <img src={webSocket} alt="webSocket" className="mt-4" />
+                <img src={pusher} alt="pusher" className="mt-1" />
+
             </motion.div>
         </>
     )

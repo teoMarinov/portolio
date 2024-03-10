@@ -7,6 +7,7 @@ import clsx from "clsx";
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Home from './components/Home';
 import TypeFitness from './components/Projects/ProjectInfo/TypeFitness';
+import MessangerClone from './components/Projects/ProjectInfo/MessangerClone';
 
 export default function App() {
 
@@ -17,6 +18,7 @@ export default function App() {
 
   useEffect(() => {
     if (location.pathname !== "/") {
+      setLoadingScreen(false);
       setAllowScroll(true);
       return
     }
@@ -28,26 +30,24 @@ export default function App() {
     setTimeout(() => {
       setAllowScroll(true);
     }, 5000)
-  }, [location.pathname])
+  }, [])
 
 
   return (
 
     <ReactLenis root>
-      <AnimatePresence>
-        {loadingScreen && <LoadingScreen />}
-      </AnimatePresence>
-      {
-        loadingScreen ||
-        <div className={clsx("w-screen overflow-hidden", allowScroll ? 'h-full' : 'h-screen')}>
-          <AnimatePresence mode='wait'>
-            <Routes key={location.pathname}>
-              <Route path="/" element={<Home />} />
-              <Route path="/typeFitness" element={<TypeFitness />} />
-            </Routes>
-          </AnimatePresence>
-        </div>
-      }
+      <div className={clsx("w-screen overflow-hidden", allowScroll ? 'h-full' : 'h-screen')}>
+        <AnimatePresence>
+          {loadingScreen && <LoadingScreen />}
+        </AnimatePresence>
+        <AnimatePresence mode='wait'>
+          <Routes key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/typeFitness" element={<TypeFitness />} />
+            <Route path='/messangerClone' element={<MessangerClone />} />
+          </Routes>
+        </AnimatePresence>
+      </div>
 
     </ReactLenis>
   )
