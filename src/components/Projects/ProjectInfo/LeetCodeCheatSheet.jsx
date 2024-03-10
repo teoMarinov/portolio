@@ -1,10 +1,10 @@
 import ProjectInfoTamplate from "./ProjectInfoTamplate"
-import typeScript from "../../../assets/SkillsIcons/typeScript.png"
-import nextJs from "../../../assets/SkillsIcons/nextjs.png"
-import tailwind from "../../../assets/SkillsIcons/tailwind.png"
-import mongo from "../../../assets/SkillsIcons/mongo.png"
-import prisma from "../../../assets/SkillsIcons/prisma.png"
-import shadcn from "../../../assets/SkillsIcons/shadcn.png"
+import TypeScript from "../../Icons/TypeScript"
+import Next from "../../Icons/Next"
+import Shadcn from "../../Icons/Shadcn"
+import Tailwind from "../../Icons/TailwindCss"
+import MongoDb from "../../Icons/MongoDb"
+import Prisma from "../../Icons/Prisma"
 
 
 const LeetCodeCheatSheet = () => {
@@ -14,20 +14,18 @@ const LeetCodeCheatSheet = () => {
         "Change between dark and light theme",
     ]
     return (
-        <ProjectInfoTamplate 
-        title='LeetCode_CheatSheet'
-        description={description} 
-        gitHub={'https://github.com/teoMarinov/LeetCode_Cheatsheet'}
-        link={'https://leet-code-cheatsheet.vercel.app'}
+        <ProjectInfoTamplate
+            title='LeetCode_CheatSheet'
+            description={description}
+            gitHub={'https://github.com/teoMarinov/LeetCode_Cheatsheet'}
+            link={'https://leet-code-cheatsheet.vercel.app'}
         >
-            <img src={typeScript} alt="type-script" />
-            <img src={nextJs} alt="nextJs" />
-
-            <img src={shadcn} alt="shadcn" className="mt-1" />
-            <img src={tailwind} alt="tailwind" className="mt-4" />
-            <img src={mongo} alt="mongo" className="mt-1" />
-            <img src={prisma} alt="prisma" />
-
+            <TypeScript />
+            <Next />
+            <Shadcn />
+            <Tailwind />
+            <MongoDb />
+            <Prisma />
         </ProjectInfoTamplate>
     )
 }

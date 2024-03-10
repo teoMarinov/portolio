@@ -26,7 +26,6 @@ const TypeFitness = () => {
             <React />
             <ChakraUI />
             <Firebase />
-
         </ProjectInfoTamplate>
     )
 }
