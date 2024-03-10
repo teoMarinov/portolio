@@ -31,7 +31,7 @@ const AboutMe = () => {
                         style={{ translateX: paragraphVal }}
                         className="h-fit lg:w-1/2 w-screen p-3 sm:text-3xl text-2xl text-justify"
                     >
-                        After graguating from Telerik Academy I have since been actively engaged in furthering my expertise in various technologies and enhancing my comprehension of web development. Honing my abilities and knowledge by working of different side projects using different technologies. I am also activle looking for opportunities to start my softwear developer career.
+                        After graduating from Telerik Academy I have since been actively engaged in furthering my expertise in various technologies and enhancing my comprehension of web development. Honing my abilities and knowledge by working of different side projects using different technologies. I am also actively looking for opportunities to start my software developer career.
                     </motion.div>
                 </div>
             </div>

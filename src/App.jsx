@@ -65,6 +65,11 @@ export default function App() {
                   <LeetCodeCheatSheet />
                 </AnimatedPage>
               } />
+              <Route path='/react' element={
+                <AnimatedPage text={'React'}>
+                  <LeetCodeCheatSheet />
+                </AnimatedPage>
+              } />
             </Routes>
           </AnimatePresence>
         }
