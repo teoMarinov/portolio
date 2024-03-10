@@ -21,6 +21,10 @@ const ItemRow = ({ img, headline, reverse, bgColor, navTo }) => {
     const scrollRight = useTransform(scrollYProgress, [0, 1], ["-50", "0%"])
     const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1])
 
+    const handleClick = () => {
+        navigate(navTo)
+        sessionStorage.setItem('homeScrollPosition', window.scrollY);
+    }
     return (
         <div ref={ref}>
             <div className={clsx('flex items-center justify-around md:gap-y-8 flex-col', reverse ? 'lg:flex-row-reverse' : 'lg:flex-row')}>
@@ -37,7 +41,7 @@ const ItemRow = ({ img, headline, reverse, bgColor, navTo }) => {
                         translateX: reverse ? scrollRight : scrollLeft,
                         scale: scale
                     }}
-                    onClick={() => navigate(navTo)}
+                    onClick={handleClick}
                     className='lg:w-2/3 w-full rounded-lg relative group cursor-pointer overflow-hidden'>
                     <span className={clsx("z-50 group-hover:absolute w-full h-full bg-opacity-15", bgColor === 'white' ? 'text-black bg-gray-600' : 'text-white bg-white')}></span>
                     <img src={img} alt="type-fitness" className="transition-all group-hover:scale-105" />

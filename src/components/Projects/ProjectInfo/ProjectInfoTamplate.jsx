@@ -6,11 +6,16 @@ import { useNavigate } from "react-router-dom";
 const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => {
   const navigate = useNavigate()
 
+  const handleClick = () => {
+    navigate('/')
+
+  }
+
   return (
 
     <div className="flex flex-col justify-between h-screen fixed">
 
-      <div onClick={() => navigate('/')} className="w-screen border-b border-gray-300 shadow-md p-9 font-poppins">
+      <div onClick={handleClick} className="w-screen border-b border-gray-300 shadow-md p-9 font-poppins">
         <motion.h1
           initial={{
             width: 0

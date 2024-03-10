@@ -30,7 +30,7 @@ export default function App() {
     }, 3000)
     setTimeout(() => {
       setAllowScroll(true);
-    }, 5000)
+    }, 4500)
   }, [])
 
 
@@ -43,7 +43,7 @@ export default function App() {
         </AnimatePresence>
         <AnimatePresence mode='wait'>
           <Routes key={location.pathname}>
-            <Route path="/" element={<Home />} />
+            {loadingScreen || <Route path="/" element={<Home />} />}
             <Route path="/typeFitness" element={<TypeFitness />} />
             <Route path='/messangerClone' element={<MessangerClone />} />
             <Route path='/leetCodeCheatSheet' element={<LeetCodeCheatSheet />} />

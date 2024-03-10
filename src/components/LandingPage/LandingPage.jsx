@@ -8,7 +8,7 @@ import { Element } from 'react-scroll';
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link } from 'react-scroll';
-import { Link as RLink } from "react-router-dom";
+
 
 const LandingPage = () => {
 
@@ -20,6 +20,9 @@ const LandingPage = () => {
     })
 
     const scroll = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"])
+
+    const scrollProg = sessionStorage.getItem('homeScrollPosition')
+    window.scrollTo(0, parseInt(scrollProg || '0'));
 
     return (
         <div ref={ref} >
@@ -39,7 +42,6 @@ const LandingPage = () => {
                                     transition={{ duration: 0.3, delay: 1, ease: 'circOut' }}
                                     className="lg:text-8xl sm:text-9xl text-6xl font-bold xl:text-start lg:text-center md:mt-0 m-0 w-fit whitespace-nowrap"
                                 >
-                                   <RLink to={'/skillz'}>Teodor Marinov</RLink> 
                                 </motion.h1>
                                 <motion.h1
                                     initial={{ y: ['100vh'] }}
