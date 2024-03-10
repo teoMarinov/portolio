@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className="hidden z-50 lg:flex fixed p-3 px-5 w-full justify-between bg-gradient-to-b from-zinc-800 to-black/0"
+        className="hidden z-40 lg:flex fixed p-3 px-5 w-full justify-between bg-gradient-to-b from-zinc-800 to-black/0"
       >
 
         <span className="gap-x-8 flex">
@@ -65,7 +65,7 @@ const Navbar = () => {
           </motion.div>
         </span>
       </div >
-      <div className="w-full fixed xl:hidden flex justify-end z-50">
+      <div className="w-full fixed xl:hidden flex justify-end z-40">
         <MobileDrawer open={drawerOpen} setOpen={setDrawerOpen}>
           <div className="flex items-center justify-center h-full" >
             <div className={clsx("flex flex-col gap-y-11 whitespace-nowrap transition-all delay-300", drawerOpen ? "scale-100" : "scale-0")}>

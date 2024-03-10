@@ -68,7 +68,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
             opacity: 1,
             rotate: 0
           }}
-          transition={{ duration: 0.5, delay: 0.2 * description.length + 0.95 + children.length * 0.25 }}
+          transition={{ duration: 0.5, delay: 0.2 * description.length + 0.95 + children.length * 0.20 }}
           className="size-fit border-gray-600 p-2 border-2 rounded-full text-gray-600 cursor-pointer transition-[backGround] hover:bg-gray-200 hover:scale-150"
           onClick={handleClick}
         >
