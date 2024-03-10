@@ -42,6 +42,7 @@ const LandingPage = () => {
                                     transition={{ duration: 0.3, delay: 1, ease: 'circOut' }}
                                     className="lg:text-8xl sm:text-9xl text-6xl font-bold xl:text-start lg:text-center md:mt-0 m-0 w-fit whitespace-nowrap"
                                 >
+                                    Teodor Marinov
                                 </motion.h1>
                                 <motion.h1
                                     initial={{ y: ['100vh'] }}

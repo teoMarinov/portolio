@@ -2,59 +2,77 @@ import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa";
 import { CiLink } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
-
+import { IoMdArrowRoundBack } from "react-icons/io";
 const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => {
   const navigate = useNavigate()
 
   const handleClick = () => {
     navigate('/')
-
   }
 
   return (
 
     <div className="flex flex-col justify-between h-screen fixed">
 
-      <div onClick={handleClick} className="w-screen border-b border-gray-300 shadow-md p-9 font-poppins">
-        <motion.h1
-          initial={{
-            width: 0
-          }}
-          animate={{
-            width: 'fit-content'
-          }}
-          transition={{ duration: 0.4, delay: 0.05, ease: 'easeIn' }}
-          className=" overflow-hidden text-7xl h-20 font-light"
-        >
-          {title}
-        </motion.h1>
+      <div className="w-screen border-b border-gray-300 shadow-md p-9  font-poppins flex justify-between">
+        <div>
+          <motion.h1
+            initial={{
+              width: 0
+            }}
+            animate={{
+              width: 'fit-content'
+            }}
+            transition={{ duration: 0.4, delay: 0.05, ease: 'easeIn' }}
+            className=" overflow-hidden text-7xl h-20 font-light"
+          >
+            {title}
+          </motion.h1>
+          <motion.div
+            initial={{
+              width: 0
+            }}
+            animate={{
+              width: 'fit-content'
+            }}
+            transition={{ duration: 0.4, delay: .45 }}
+            className="flex items-center w-fit pt-6 pl-3 gap-x-5 lg:text-xl md:text-5xl text-2xl overflow-hidden"
+          >
+            <a
+              onClick={(e) => { e.stopPropagation() }}
+              className="transition-all hover:-translate-y-1 hover:text-sky-600"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={gitHub}>
+              <FaGithub size={26} className="w-10" />
+            </a>
+
+            {link && <a
+              onClick={(e) => { e.stopPropagation() }}
+              className=" transition-all hover:-translate-y-1 hover:text-sky-600"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={link}>
+              <CiLink size={26} className="w-10" />
+            </a>}
+          </motion.div>
+        </div>
         <motion.div
           initial={{
-            width: 0
+            translateX: '100px',
+            opacity: .2,
+            rotate: 360
           }}
           animate={{
-            width: 'fit-content'
+            translateX: '0px',
+            opacity: 1,
+            rotate: 0
           }}
-          transition={{ duration: 0.4, delay: .45 }}
-          className="flex items-center w-fit pt-6 pl-3 gap-x-5 lg:text-xl md:text-5xl text-2xl overflow-hidden"
+          transition={{ duration: 0.5, delay: 0.2 * description.length + 0.95 + children.length * 0.25 }}
+          className="size-fit border-gray-600 p-2 border-2 rounded-full text-gray-600 cursor-pointer transition-[backGround] hover:bg-gray-200 hover:scale-150"
+          onClick={handleClick}
         >
-          <a
-            onClick={(e) => { e.stopPropagation() }}
-            className="transition-all hover:-translate-y-1 hover:text-sky-600"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={gitHub}>
-            <FaGithub size={26} className="w-10" />
-          </a>
-
-          {link && <a
-            onClick={(e) => { e.stopPropagation() }}
-            className=" transition-all hover:-translate-y-1 hover:text-sky-600"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={link}>
-            <CiLink size={26} className="w-10" />
-          </a>}
+          <IoMdArrowRoundBack size={48} />
         </motion.div>
       </div>
 
