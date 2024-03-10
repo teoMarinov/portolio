@@ -14,14 +14,14 @@ import AnimatedPage from './components/AnimatedPage';
 export default function App() {
 
   const [loadingScreen, setLoadingScreen] = useState(false);
-  const [allowScroll, setAllowScroll] = useState(false);
+  const [lockScroll, setLockScroll] = useState(false);
 
   const location = useLocation();
 
   useEffect(() => {
     if (location.pathname !== "/") {
       setLoadingScreen(false);
-      setAllowScroll(true);
+      setLockScroll(true);
       return
     }
     setLoadingScreen(true);
@@ -30,7 +30,7 @@ export default function App() {
       setLoadingScreen(false);
     }, 3000)
     setTimeout(() => {
-      setAllowScroll(true);
+      setLockScroll(true);
     }, 4500)
   }, [])
 
@@ -38,7 +38,7 @@ export default function App() {
   return (
 
     <ReactLenis root>
-      <div className={clsx("w-screen overflow-hidden", allowScroll ? 'h-full' : 'h-screen')}>
+      <div className={clsx("w-screen overflow-hidden", lockScroll ? 'h-full' : 'h-screen')}>
         <AnimatePresence>
           {loadingScreen && <LoadingScreen />}
         </AnimatePresence>
@@ -46,7 +46,7 @@ export default function App() {
           <AnimatePresence mode='wait'>
             <Routes key={location.pathname}>
               <Route path="/" element={
-                <AnimatedPage text={'Home'}>
+                <AnimatedPage text={'Home'} display={lockScroll}>
                   <Home />
                 </AnimatedPage>
               } />

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
-
-const AnimatedPage = ({ children, text }) => {
+import clsx from "clsx"
+const AnimatedPage = ({ children, text, display = true }) => {
     return (
         <div className="z-50">
             <motion.div
@@ -17,7 +17,7 @@ const AnimatedPage = ({ children, text }) => {
                         transition: { duration: .3 }
                     }
                 }
-                className='fixed w-screen h-screen bg-zinc-800 flex justify-center items-center z-50 text-white text-6xl font-light font-poppins'
+                className={clsx('fixed w-screen h-screen  bg-zinc-800 justify-center items-center z-50 text-white text-6xl font-light font-poppins', display ? " flex" : "hidden")}
             >
                 {text}
             </motion.div>
