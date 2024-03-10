@@ -4,32 +4,32 @@ import nextJs from "../../../assets/SkillsIcons/nextjs.png"
 import tailwind from "../../../assets/SkillsIcons/tailwind.png"
 import mongo from "../../../assets/SkillsIcons/mongo.png"
 import prisma from "../../../assets/SkillsIcons/prisma.png"
-import pusher from "../../../assets/SkillsIcons/pusher.svg"
+import shadcn from "../../../assets/SkillsIcons/shadcn.png"
 
-const MessangerClone = () => {
+
+const LeetCodeCheatSheet = () => {
     const description = [
-        "Github and Google authentication",
-        "Message with people",
-        "Make group chats",
-        "Edit your profile,"
+        "Take notes of your LeetCode problem's solutions",
+        "Sort by name, difficulty, date",
+        "Change between dark and light theme",
     ]
     return (
         <ProjectInfoTamplate 
-        title='MessangerClone' 
+        title='LeetCode_CheatSheet'
         description={description} 
-        gitHub={'https://github.com/teoMarinov/messenger-clone'}
-        link={'https://messenger-clone-woad-gamma.vercel.app'}
+        gitHub={'https://github.com/teoMarinov/LeetCode_Cheatsheet'}
+        link={'https://leet-code-cheatsheet.vercel.app'}
         >
             <img src={typeScript} alt="type-script" />
-            <img src={nextJs} alt="nextJs" className="mt-2" />
+            <img src={nextJs} alt="nextJs" />
 
+            <img src={shadcn} alt="shadcn" className="mt-1" />
             <img src={tailwind} alt="tailwind" className="mt-4" />
             <img src={mongo} alt="mongo" className="mt-1" />
             <img src={prisma} alt="prisma" />
-            <img src={pusher} alt="pusher" className="mt-1" />
 
         </ProjectInfoTamplate>
     )
 }
 
-export default MessangerClone
+export default LeetCodeCheatSheet

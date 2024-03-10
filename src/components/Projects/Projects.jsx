@@ -11,7 +11,7 @@ const Projects = () => {
             <Heading text="Projects" />
             <ItemRow img={typeFitness} headline={'typeFitness'} reverse={false} bgColor={'black'} navTo={'/typeFitness'}/>
             <ItemRow img={messangerClone} headline={'Messanger Clone'} reverse={true} bgColor={'white'} navTo={'/messangerClone'} />
-            <ItemRow img={leetcode_cheatsheet} headline={'LeetCode Cheatsheet'} reverse={false} bgColor={'black'} />
+            <ItemRow img={leetcode_cheatsheet} headline={'LeetCode Cheatsheet'} reverse={false} bgColor={'black'} navTo={'/leetCodeCheatSheet'}/>
         </Element>
     )
 }

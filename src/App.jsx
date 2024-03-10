@@ -8,6 +8,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Home from './components/Home';
 import TypeFitness from './components/Projects/ProjectInfo/TypeFitness';
 import MessangerClone from './components/Projects/ProjectInfo/MessangerClone';
+import LeetCodeCheatSheet from './components/Projects/ProjectInfo/LeetCodeCheatSheet';
 
 export default function App() {
 
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/typeFitness" element={<TypeFitness />} />
             <Route path='/messangerClone' element={<MessangerClone />} />
+            <Route path='/leetCodeCheatSheet' element={<LeetCodeCheatSheet />} />
           </Routes>
         </AnimatePresence>
       </div>

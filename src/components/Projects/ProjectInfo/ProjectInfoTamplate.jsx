@@ -53,7 +53,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
         </motion.div>
       </div>
 
-      <div className="h-full p-12 text-2xl overflow-auto">
+      <div className="h-full p-12 text-2xl gap-y-8 flex flex-col overflow-auto">
         {description.map((text, index) => (
           <motion.li
             initial={{
