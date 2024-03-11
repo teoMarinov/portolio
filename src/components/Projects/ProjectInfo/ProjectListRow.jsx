@@ -12,7 +12,7 @@ const ProjectListRow = ({ data }) => {
                     key={project.title}
                     className="p-6 font-poppins font-light overflow-hidden"
                 >
-                    <div className="flex gap-x-6 items-center">
+                    <div className="flex gap-x-6 items-center ">
                         <Clickable textColor={'text-gray-600'} lineColor="bg-gray-400">
                             <motion.h1
                                 initial={{
@@ -56,7 +56,7 @@ const ProjectListRow = ({ data }) => {
                         }
 
                     </div>
-                    <div className="flex gap-x-7 text-xl pl-6 mt-2 overflow-hidden">
+                    <div className="flex gap-x-7 text-xl pl-6 mt-2">
                         {project.stack && project.stack.map((tech, i) => (
                             <motion.div
                                 key={tech}
