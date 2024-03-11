@@ -21,8 +21,6 @@ const LandingPage = () => {
 
     const scroll = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"])
 
-    const scrollProg = sessionStorage.getItem('homeScrollPosition')
-    window.scrollTo(0, parseInt(scrollProg || '0'));
 
     return (
         <div ref={ref} >

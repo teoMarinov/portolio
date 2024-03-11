@@ -40,7 +40,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
           >
             <a
               onClick={(e) => { e.stopPropagation() }}
-              className="transition-all hover:-translate-y-1 hover:text-sky-600"
+              className="transition-[color] hover:-translate-y-1 hover:text-sky-600"
               target="_blank"
               rel="noopener noreferrer"
               href={gitHub}>
@@ -49,7 +49,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
 
             {link && <a
               onClick={(e) => { e.stopPropagation() }}
-              className=" transition-all hover:-translate-y-1 hover:text-sky-600"
+              className=" transition-[color] hover:-translate-y-1 hover:text-sky-600"
               target="_blank"
               rel="noopener noreferrer"
               href={link}>

@@ -23,7 +23,7 @@ const ItemRow = ({ img, headline, reverse, bgColor, navTo }) => {
 
     const handleClick = () => {
         navigate(navTo)
-        sessionStorage.setItem('homeScrollPosition', window.scrollY);
+        // sessionStorage.setItem('homeScrollPosition', window.scrollY);
     }
     return (
         <div ref={ref}>

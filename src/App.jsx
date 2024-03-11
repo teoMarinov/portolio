@@ -10,6 +10,8 @@ import TypeFitness from './components/Projects/ProjectInfo/TypeFitness';
 import MessangerClone from './components/Projects/ProjectInfo/MessangerClone';
 import LeetCodeCheatSheet from './components/Projects/ProjectInfo/LeetCodeCheatSheet';
 import AnimatedPage from './components/AnimatedPage';
+import TypeScriptInfo from './components/Skills/SkillsInfo/TypeScriptInfo';
+import AllProjectsList from './components/Projects/ProjectInfo/AllProjectsList';
 
 export default function App() {
 
@@ -32,6 +34,7 @@ export default function App() {
     setTimeout(() => {
       setLockScroll(true);
     }, 4500)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 
@@ -56,18 +59,23 @@ export default function App() {
                 </AnimatedPage>
               } />
               <Route path='/messangerClone' element={
-                <AnimatedPage text={'MessangerClone'}>
+                <AnimatedPage text={'Messanger Clone'}>
                   <MessangerClone />
                 </AnimatedPage>
               } />
               <Route path='/leetCodeCheatSheet' element={
-                <AnimatedPage text={'LeetCodeCheatSheet'}>
+                <AnimatedPage text={'LeetCode_CheatSheet'}>
                   <LeetCodeCheatSheet />
                 </AnimatedPage>
               } />
-              <Route path='/react' element={
-                <AnimatedPage text={'React'}>
-                  <LeetCodeCheatSheet />
+              <Route path='/typeScript' element={
+                <AnimatedPage text={'TypeScript'}>
+                  <TypeScriptInfo />
+                </AnimatedPage>
+              } />
+              <Route path='/allProjects' element={
+                <AnimatedPage text={'All Projects'}>
+                  <AllProjectsList />
                 </AnimatedPage>
               } />
             </Routes>
