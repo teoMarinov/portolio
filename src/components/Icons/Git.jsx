@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 const Git = () => {
     const nav = useNavigate()
     return (
-        <img onClick={() => nav('/git')} src={git} alt="git" className="transition-all hover:-translate-y-5 cursor-pointer" />
+        <img onClick={() => nav('/Git')} src={git} alt="git" className="transition-all hover:-translate-y-5 cursor-pointer" />
     )
 }
 

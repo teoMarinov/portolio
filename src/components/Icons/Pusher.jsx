@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 const Pusher = () => {
     const nav = useNavigate()
     return (
-        <img onClick={() => nav('/pusher')} src={pusher} alt="pusher" className="transition-all hover:-translate-y-5 cursor-pointer" />
+        <img onClick={() => nav('/Pusher')} src={pusher} alt="pusher" className="transition-all hover:-translate-y-5 cursor-pointer" />
     )
 }
 

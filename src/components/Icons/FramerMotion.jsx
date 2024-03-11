@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 const FramerMotion = () => {
     const nav = useNavigate()
     return (
-        <img onClick={() => nav('/framerMotion')} src={framerMotion} alt="framerMotion" className="transition-all hover:-translate-y-5 cursor-pointer" />
+        <img onClick={() => nav('/FramerMotion')} src={framerMotion} alt="framerMotion" className="transition-all hover:-translate-y-5 cursor-pointer" />
     )
 }
 

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 const Tailwind = () => {
     const nav = useNavigate()
     return (
-        <img onClick={() => nav('/tailwind')} src={tailwind} alt="tailwind" className="transition-all hover:-translate-y-5 cursor-pointer mt-3" />
+        <img onClick={() => nav('/Tailwind')} src={tailwind} alt="tailwind" className="transition-all hover:-translate-y-5 cursor-pointer mt-3" />
     )
 }
 

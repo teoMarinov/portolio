@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 const Sql = () => {
     const nav = useNavigate()
     return (
-        <img onClick={() => nav('/sql')} src={sql} alt="sql" className="transition-all hover:-translate-y-5 cursor-pointer" />
+        <img onClick={() => nav('/Sql')} src={sql} alt="sql" className="transition-all hover:-translate-y-5 cursor-pointer" />
     )
 }
 

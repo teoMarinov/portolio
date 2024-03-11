@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 const ChakraUI = () => {
     const nav = useNavigate()
     return (
-        <img onClick={() => nav('/chakraUI')} src={chakraUi} alt="chakraUI" className="transition-all hover:-translate-y-5 cursor-pointer" />
+        <img onClick={() => nav('/ChakraUI')} src={chakraUi} alt="chakraUI" className="transition-all hover:-translate-y-5 cursor-pointer" />
     )
 }
 

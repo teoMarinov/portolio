@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 const Reactnative = () => {
     const nav = useNavigate()
     return (
-        <img onClick={() => nav('/reactNative')} src={reactNative} alt="react-native" className="transition-all hover:-translate-y-5 cursor-pointer" />
+        <img onClick={() => nav('/ReactNative')} src={reactNative} alt="react-native" className="transition-all hover:-translate-y-5 cursor-pointer" />
     )
 }
 
