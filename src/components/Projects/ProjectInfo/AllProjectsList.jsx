@@ -27,7 +27,7 @@ const AllProjectsList = () => {
                 >
                     <IoMdArrowRoundBack size={48} />
                 </motion.div>
-                <motion.ah1
+                <motion.h1
                     initial={{
                         translateY: '-100px',
                         opacity: .2,
@@ -40,7 +40,7 @@ const AllProjectsList = () => {
                     className=" w-full text-center text-6xl text-gray-600 font-poppins font-extralight p-3"
                 >
                     All Projects
-                </motion.ah1>
+                </motion.h1>
             </div>
             <ProjectListRow data={data} />
         </div>
