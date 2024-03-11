@@ -22,7 +22,7 @@ const AllProjectsList = () => {
                         rotate: 0
                     }}
                     transition={{ duration: 0.5, delay: 1.5 }}
-                    className="size-fit absolute m-2 ml-5 border-gray-600 p-1 border-2 rounded-full text-gray-600 cursor-pointer transition-[backGround] hover:bg-gray-200 hover:scale-150"
+                    className="size-fit m-2 ml-5 border-gray-600 p-1 border-2 rounded-full text-gray-800 cursor-pointer transition-[backGround] hover:bg-gray-200 hover:scale-150"
                     onClick={() => navigate('/')}
                 >
                     <IoMdArrowRoundBack size={48} />
