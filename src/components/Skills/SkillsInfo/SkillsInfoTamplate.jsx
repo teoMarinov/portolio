@@ -1,4 +1,4 @@
-import ProjectListRow from "../../Projects/ProjectInfo/ProjectListRow"
+import ProjectListRow from "../../Projects/AllProjectsList/ProjectListRow";
 import { IoHomeOutline } from "react-icons/io5";
 import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom";

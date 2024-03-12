@@ -11,8 +11,7 @@ import MessangerClone from './components/Projects/ProjectInfo/MessangerClone';
 import LeetCodeCheatSheet from './components/Projects/ProjectInfo/LeetCodeCheatSheet';
 import AnimatedPage from './components/AnimatedPage';
 import TypeScriptInfo from './components/Skills/SkillsInfo/TypeScriptInfo';
-import AllProjectsList from './components/Projects/ProjectInfo/AllProjectsList';
-
+import AllProjectsList from './components/Projects/AllProjectsList/AllProjectsList';
 export default function App() {
 
   const [loadingScreen, setLoadingScreen] = useState(false);
