@@ -11,7 +11,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
 
     <div className="flex flex-col justify-between h-screen fixed">
 
-      <div className="w-screen border-b border-gray-300 shadow-md sm:p-9 font-poppins flex sm:flex-row flex-col-reverse sm:items-start items-end justify-between">
+      <div className="w-screen border-b border-gray-300 shadow-md sm:p-9 pb-4 font-poppins flex sm:flex-row flex-col-reverse sm:items-start items-end justify-between">
         <div className="w-full">
           <motion.h1
             initial={{
@@ -73,7 +73,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
         </motion.div>
       </div>
 
-      <div className="h-full p-12 text-2xl gap-y-8 flex flex-col overflow-auto">
+      <div className="h-full p-12 sm:text-2xl text-lg gap-y-8 flex flex-col overflow-auto">
         {description.map((text, index) => (
           <motion.li
             initial={{

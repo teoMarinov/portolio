@@ -19,7 +19,7 @@ const Projects = () => {
                 <motion.button
                     whileTap={{ scale: 0.9 }}
                     onClick={() => nav('/allProjects')}
-                    className='border border-gray-500/40 text-gray-70 transition-all hover:scale-110 hover:bg-gray-200 text-xl w-1/2 p-3 rounded-md font-poppins'
+                    className='border border-gray-500/40 text-gray-70 transition-all hover:scale-110 hover:bg-gray-200 md:text-xl text-sm md:w-1/2 w-1/3 md:p-3 py-2 rounded-md font-poppins'
                 >
                     View all projects
                 </motion.button>

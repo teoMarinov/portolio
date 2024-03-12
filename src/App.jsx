@@ -53,7 +53,7 @@ export default function App() {
                 </AnimatedPage>
               } />
               <Route path="/typeFitness" element={
-                <AnimatedPage text={'TypeFitness'}>
+                <AnimatedPage text={'Type Fitness'}>
                   <TypeFitness />
                 </AnimatedPage>
               } />
@@ -63,7 +63,7 @@ export default function App() {
                 </AnimatedPage>
               } />
               <Route path='/leetCodeCheatSheet' element={
-                <AnimatedPage text={'LeetCode_CheatSheet'}>
+                <AnimatedPage text={'LeetCode CheatSheet'}>
                   <LeetCodeCheatSheet />
                 </AnimatedPage>
               } />

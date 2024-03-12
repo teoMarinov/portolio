@@ -65,7 +65,7 @@ const Navbar = () => {
           </motion.div>
         </span>
       </div >
-      <div className="w-full fixed xl:hidden flex justify-end z-40">
+      <div className="w-full fixed lg:hidden flex justify-end z-40">
         <MobileDrawer open={drawerOpen} setOpen={setDrawerOpen}>
           <div className="flex items-center justify-center h-full" >
             <div className={clsx("flex flex-col gap-y-11 whitespace-nowrap transition-all delay-300", drawerOpen ? "scale-100" : "scale-0")}>
