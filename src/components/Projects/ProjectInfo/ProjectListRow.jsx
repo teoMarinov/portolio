@@ -6,74 +6,61 @@ import { motion } from "framer-motion";
 
 const ProjectListRow = ({ data }) => {
     return (
-        <div>
+        <div className="overflow-hidden">
             {data.map((project, index) => (
-                <div
+
+                <motion.div
+                    initial={{
+                        opacity: 0,
+                        y: -100
+                    }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: .2, ease: 'easeIn', delay: index * 0.2 + 1.6 }}
+
                     key={project.title}
-                    className="p-6 font-poppins font-light overflow-hidden"
+                    className="p-6 font-poppins overflow-hidden border-b border-gray-700/40 flex justify-between"
                 >
-                    <div className="flex gap-x-6 items-center ">
+                    {/* Name and stack */}
+                    <div className=" pl-44">
                         <Clickable textColor={'text-gray-600'} lineColor="bg-gray-400">
-                            <motion.h1
-                                initial={{
-                                    opacity: .4,
-                                    y: -100
-                                }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: .2, ease: 'easeInOut', delay: index * 0.3 + 1.6 }}
-                                className="text-4xl p-3"
+                            <h1
+                                className="text-6xl py-5 font-extralight "
                             >
                                 <Link to={project.navTo}>{project.title}</Link>
-                            </motion.h1>
+                            </h1>
                         </Clickable>
-                        <motion.a
-                            initial={{
-                                opacity: .4,
-                                y: -100
-                            }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: .2, ease: 'easeInOut', delay: index * 0.3 + 1.65 }}
+                        <div className="flex gap-x-7 text-xl pl-7 mt-2">
+                            {project.stack && project.stack.map((tech, i) => (
+                                <div key={tech}
+                                >
+                                    <Clickable textColor={'text-gray-600'} lineColor="bg-gray-400">
+                                        <Link to={`/${tech}`}>{tech}</Link>
+                                    </Clickable>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* LinkIcons */}
+                    <div className="flex text-gray-600 pr-14">
+                        <a
                             href={project.gitHub}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="transition-[color] hover:-translate-y-1 hover:text-sky-600">
-                            <FaGithub size={27} />
-                        </motion.a>
+                            className="group transition-[color] flex items-center  hover:text-sky-600 border-l px-24 border-gray-700/40 ">
+                            <FaGithub size={44} className=" transition-transform group-hover:-translate-y-2" />
+                        </a>
                         {project.link && (
-                            <motion.a
-                                initial={{
-                                    opacity: .4,
-                                    y: -100
-                                }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: .2, ease: 'easeInOut', delay: index * 0.3 + 1.7 }}
+                            <a
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="transition-[color] hover:-translate-y-1 hover:text-sky-600">
-                                <CiLink size={27} />
-                            </motion.a>)
+                                className="group transition-[color] flex items-center hover:-translate-y-1 hover:text-sky-600 border-x px-24 border-gray-700/40">
+                                <CiLink size={44} className=" transition-transform group-hover:-translate-y-2" />
+                            </a>)
                         }
-
                     </div>
-                    <div className="flex gap-x-7 text-xl pl-6 mt-2">
-                        {project.stack && project.stack.map((tech, i) => (
-                            <motion.div
-                                key={tech}
-                                initial={{
-                                    opacity: 0,
-
-                                }}
-                                animate={{ opacity: 1}}
-                                transition={{ duration: .2, ease: 'easeInOut', delay: 1.7 + index * 0.3 + i * .1 }}
-                            >
-                                <Clickable textColor={'text-gray-600'} lineColor="bg-gray-400">
-                                    <Link to={`/${tech}`}>{tech}</Link>
-                                </Clickable>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
+                </motion.div>
             ))
             }
         </div >

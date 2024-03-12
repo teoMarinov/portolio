@@ -24,7 +24,7 @@ const data = [
       "Prisma",
       "NodeJs",
     ],
-    navTo: "/messengerClone",
+    navTo: "/messangerClone",
   },
   {
     title: "LeetCode_CheatSheet",
