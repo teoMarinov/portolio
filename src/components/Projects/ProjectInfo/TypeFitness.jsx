@@ -17,7 +17,7 @@ const TypeFitness = () => {
     ]
     return (
         <ProjectInfoTamplate
-            title='TypeFitness'
+            title='Type Fitness'
             description={description}
             gitHub={'https://github.com/teoMarinov/typeFitness'}
             link={'https://type-fitness.vercel.app'}

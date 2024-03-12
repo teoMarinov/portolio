@@ -15,7 +15,7 @@ const LeetCodeCheatSheet = () => {
     ]
     return (
         <ProjectInfoTamplate
-            title='LeetCode_CheatSheet'
+            title='LeetCode CheatSheet'
             description={description}
             gitHub={'https://github.com/teoMarinov/LeetCode_Cheatsheet'}
             link={'https://leet-code-cheatsheet.vercel.app'}

@@ -15,7 +15,7 @@ const MessangerClone = () => {
     ]
     return (
         <ProjectInfoTamplate
-            title='MessangerClone'
+            title='Messanger Clone'
             description={description}
             gitHub={'https://github.com/teoMarinov/messenger-clone'}
             link={'https://messenger-clone-woad-gamma.vercel.app'}
