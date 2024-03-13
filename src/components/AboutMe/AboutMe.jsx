@@ -18,8 +18,8 @@ const AboutMe = () => {
 
 
     return (
-        <Element name='aboutMe' className="sm:h-screen h-fit md:my-0 mt-14 mb-44 flex items-center">
-            <div ref={ref}>
+        <div ref={ref}>
+            <Element name='aboutMe' className="sm:h-screen h-fit md:my-0 mt-14 mb-44 flex items-center">
                 <div className="flex lg:flex-row flex-col items-center justify-center font-poppins gap-x-36 ">
                     <motion.h1
                         style={{ translateX: headingVal }}
@@ -34,8 +34,8 @@ const AboutMe = () => {
                         After graduating from Telerik Academy I have since been actively engaged in furthering my expertise in various technologies and enhancing my comprehension of web development. Honing my abilities and knowledge by working of different side projects using different technologies. I am also actively looking for opportunities to start my software developer career.
                     </motion.div>
                 </div>
-            </div>
-        </Element>
+            </Element>
+        </div>
     )
 }
 

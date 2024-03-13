@@ -19,6 +19,26 @@ import MySql from "../Icons/MySql"
 import FramerMotion from "../Icons/FramerMotion"
 import Pusher from "../Icons/Pusher"
 import { useRef } from "react";
+import typeScript from "../../assets/SkillsIcons/typeScript.png"
+import tailwind from "../../assets/SkillsIcons/tailwind.png"
+import sql from "../../assets/SkillsIcons/sql.png"
+import shadcn from "../../assets/SkillsIcons/shadcn.png"
+import reactNative from "../../assets/SkillsIcons/reactNative.png"
+import react from "../../assets/SkillsIcons/react.png"
+import pusher from "../../assets/SkillsIcons/pusher.svg"
+import prisma from "../../assets/SkillsIcons/prisma.png"
+import php from "../../assets/SkillsIcons/php.png"
+import nodeJs from "../../assets/SkillsIcons/nodeJs.png"
+import next from "../../assets/SkillsIcons/nextjs.png"
+import mySql from "../../assets/SkillsIcons/mysql.svg"
+import mongoDb from "../../assets/SkillsIcons/mongo.png"
+import javaScript from "../../assets/SkillsIcons/javaScript.png"
+import html from "../../assets/SkillsIcons/html.png"
+import git from "../../assets/SkillsIcons/git.png"
+import framerMotion from "../../assets/SkillsIcons/framerMotion.svg"
+import firebase from "../../assets/SkillsIcons/firebase.png"
+import css from "../../assets/SkillsIcons/css.png"
+import chakraUi from "../../assets/SkillsIcons/chakraUI.png"
 
 
 const SkillsRow = () => {
@@ -65,16 +85,16 @@ const SkillsRow = () => {
             >
                 <div className="flex gap-x-5 2xl:size-44 md:size-40 sm:size-32 size-20 mb-16">
 
-                    <TypeScript />
-                    <JavaScript />
-                    <Html />
-                    <Css />
-                    <Next />
-                    <React />
-                    <Reactnative />
-                    <Php />
-                    <Sql />
-                    <NodeJs />
+                    <img src={typeScript} alt="type script" />
+                    <img src={javaScript} alt="java script" />
+                    <img src={html} alt="html" />
+                    <img src={css} alt="css" />
+                    <img src={next} alt="next" />
+                    <img src={react} alt="react" />
+                    <img src={reactNative} alt="react native" />
+                    <img src={php} alt="php" />
+                    <img src={sql} alt="sql" />
+                    <img src={nodeJs} alt="node J S" />
 
                 </div>
             </motion.div>
@@ -86,15 +106,18 @@ const SkillsRow = () => {
                 }}
             >
                 <div className="flex gap-x-5 2xl:size-48 md:size-40 sm:size-32 size-20 mb-16">
-                    <Tailwind />
-                    <ChakraUI />
-                    <Shadcn />
-                    <Firebase />
-                    <Prisma />
-                    <MongoDb />
-                    <MySql />
-                    <FramerMotion />
-                    <Pusher />
+
+                    <img src={tailwind} alt="tailwind" />
+                    <img src={chakraUi} alt="chakra Ui" />
+                    <img src={shadcn} alt="shadcn" />
+                    <img src={firebase} alt="css" />
+                    <img src={prisma} alt="prisma" />
+                    <img src={mongoDb} alt="mongo Db" />
+                    <img src={mySql} alt="my Sql" />
+                    <img src={git} alt="git" />
+                    <img src={framerMotion} alt="framerMotion" />
+                    <img src={pusher} alt="pusher" />
+
                 </div>
 
             </motion.div>

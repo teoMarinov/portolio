@@ -53,7 +53,7 @@ const AllProjectsList = () => {
                     <IoHomeOutline className="text-gray-700/80 sm:size-11 size-6 lg:group-hover:scale-110" />
                 </motion.div>
             </div>
-            <div className="lg:block ">
+            <div className="lg:block hidden">
                 <ProjectListRow data={data} />
             </div>
             <div className="lg:hidden block">

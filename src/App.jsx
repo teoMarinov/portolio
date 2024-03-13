@@ -12,6 +12,7 @@ import LeetCodeCheatSheet from './components/Projects/ProjectInfo/LeetCodeCheatS
 import AnimatedPage from './components/AnimatedPage';
 import TypeScriptInfo from './components/Skills/SkillsInfo/TypeScriptInfo';
 import AllProjectsList from './components/Projects/AllProjectsList/AllProjectsList';
+import JavaScriptInfo from './components/Skills/SkillsInfo/JavaScriptInfo';
 export default function App() {
 
   const [loadingScreen, setLoadingScreen] = useState(false);
@@ -67,16 +68,21 @@ export default function App() {
                   <LeetCodeCheatSheet />
                 </AnimatedPage>
               } />
-              <Route path='/typeScript' element={
+                  <Route path='/allProjects' element={
+                    <AnimatedPage text={'All Projects'}>
+                      <AllProjectsList />
+                    </AnimatedPage>
+                  } />
+              {/* <Route path='/TypeScript' element={
                 <AnimatedPage text={'TypeScript'}>
                   <TypeScriptInfo />
                 </AnimatedPage>
               } />
-              <Route path='/allProjects' element={
-                <AnimatedPage text={'All Projects'}>
-                  <AllProjectsList />
+              <Route path='/JavaScript' element={
+                <AnimatedPage text={'JavaScript'}>
+                  <JavaScriptInfo />
                 </AnimatedPage>
-              } />
+              } /> */}
             </Routes>
           </AnimatePresence>
         }

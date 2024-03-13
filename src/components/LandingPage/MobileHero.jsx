@@ -10,16 +10,17 @@ const MobileHero = () => {
 
             <motion.div
                 initial={{
-                    x: '100%'
+                    scale: 0
+
                 }}
                 animate={{
-                    x: 0,
-                    transition: { duration: 3, ease: 'linear', delay: .1 }
+                    scale: 1,
+                    transition: { duration: .5, ease: 'linear', delay: .12 }
                 }}
             >
                 <motion.h1
                     animate={{ x: ["0%", '-51%'] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: 'linear', delay: 3.1 }}
+                    transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
                     className="sm:text-9xl text-8xl font-bold  md:mt-0 m-0 w-fit whitespace-nowrap"
                 >
                     Teodor Marinov Teodor Marinov
@@ -28,18 +29,18 @@ const MobileHero = () => {
 
             <motion.div
                 initial={{
-                    x: '-50%'
+                    scale: 0
 
                 }}
                 animate={{
-                    x: '0%',
-                    transition: { duration: 3.66, ease: 'linear', delay: .12 }
+                    scale: 1,
+                    transition: { duration: .5, ease: 'linear', delay: .12 }
                 }}
                 className="w-fit"
             >
                 <motion.h1
                     animate={{ x: ['-50.66%', '0%'] }}
-                    transition={{ duration: 3.66, repeat: Infinity, ease: 'linear', delay: 3.78}}
+                    transition={{ duration: 3.66, repeat: Infinity, ease: 'linear' }}
                     className="w-fit text-nowrap sm:text-9xl text-8xl font-bold block my-10 text-purple-500"
                 >
                     A Junior Developer A Junior Developer
