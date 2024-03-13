@@ -7,7 +7,7 @@ const LoadingScreen = () => {
         color: "rgb(39 39 42)"
       }}
       transition={{ duration: 0.6, ease: "circOut" }}
-      className="w-screen h-screen bg-zinc-800 text-gray-200 text-5xl font-poppins font-extralight flex items-center justify-center overflow-hidden"
+      className="w-screen h-screen cursor-wait bg-zinc-800 text-gray-200 text-5xl font-poppins font-extralight flex items-center justify-center overflow-hidden"
     >
       <div className="w-screen relative justify-center flex items-center h-64">
         <div className="absolute w-[53px]">
