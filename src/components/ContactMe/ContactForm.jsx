@@ -2,7 +2,8 @@ import { useState, useRef } from "react"
 import Input from "./Input";
 import TextArea from "./TextArea";
 import emailjs from '@emailjs/browser';
-import clsx from "clsx";
+import SubmitButton from "./SubmitButton";
+import { useAnimationControls } from "framer-motion"
 
 const ContactForm = () => {
 
@@ -19,6 +20,8 @@ const ContactForm = () => {
         email: '',
         message: ''
     });
+
+    const controls = useAnimationControls()
 
     const sendEmail = (e) => {
 
@@ -46,6 +49,8 @@ const ContactForm = () => {
             return
         }
 
+
+        controls.start('open')
         emailjs
             .sendForm('service_dctgdo5', 'template_pizat4w', form.current, {
                 publicKey: 'XAdBwN04OJvL4nPkH',
@@ -56,7 +61,7 @@ const ContactForm = () => {
                     setEmail('')
                     setMessage('')
                     setSent(true)
-                    alert('message sent')
+                    controls.start('finish')
                     console.log('SUCCESS!');
                 },
                 (error) => {
@@ -72,7 +77,7 @@ const ContactForm = () => {
             <Input name='user_name' label="Name" placeholder="Enter your name" error={errors.name} value={name} onChange={(val) => setName(val)} />
             <Input name="user_email" label="Email" placeholder="Enter your email" error={errors.email} value={email} onChange={(val) => setEmail(val)} />
             <TextArea name="message" label="Message" placeholder="Enter your message" error={errors.message} value={message} onChange={(val) => setMessage(val)} />
-            <button type="submit" className={clsx("text-gray-300 hover:text-gray-200 w-full xl:h-12 lg:h-20 h-12 rounded-md transition-all duration-200 hover:border-gray-500 border border-gray-600 hover:bg-gray-700", sent && 'cursor-not-allowed hover:bg-none opacity-55')} >Send Email Directly</button>
+            <SubmitButton sent={sent} controls={controls} />
         </form>
     )
 }
