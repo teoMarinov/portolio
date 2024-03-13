@@ -21,15 +21,8 @@ const ContactMe = () => {
 
   const openToast = () => {
 
-    controls.start("initial")
+    controls.start("open")
 
-    setTimeout(() => {
-      controls.start("open")
-    }, 200)
-
-    setTimeout(() => {
-      controls.start("initial")
-    }, 3000)
   }
 
   return (

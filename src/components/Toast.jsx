@@ -1,20 +1,25 @@
 import { motion } from "framer-motion"
 const Toast = ({ message, controls }) => {
     return (
-        <div className="fixed top-5 right-[45%] z-50 w-fit">
+        <div style={{ right: 'calc(50% - 128px)' }} className="fixed top-5 z-50 w-fit cursor-pointer">
             <motion.div
                 variants={{
                     initial: {
                         scale: 0
                     },
                     open: {
-                        scale: 1
+                        scale: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                        transition: {
+                            duration: 3,
+                            ease: 'easeInOut'
+                        }
                     }
                 }}
-                initial={'initial'}
                 animate={controls}
+                initial={'initial'}
                 whileTap={'initial'}
-                className="p-4 h-fit w-64 bg-blue-600 flex items-center justify-center text-white z-50 rounded-lg"
+                whileHover={{ scale: 1 }}
+                className="p-4 h-fit w-64 bg-neutral-800 text-gray-400 border-gray-400/60 border-2 font-semibold flex text-lg items-center justify-center z-50 rounded-lg"
             >
                 {message}
             </motion.div>
