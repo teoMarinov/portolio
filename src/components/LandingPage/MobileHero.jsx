@@ -14,12 +14,12 @@ const MobileHero = () => {
                 }}
                 animate={{
                     x: 0,
-                    transition: { duration: 2.2, ease: 'linear', delay: .7 }
+                    transition: { duration: 3, ease: 'linear', delay: .1 }
                 }}
             >
                 <motion.h1
                     animate={{ x: ["0%", '-51%'] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: 'linear', delay: 2.9 }}
+                    transition={{ duration: 3, repeat: Infinity, ease: 'linear', delay: 3.1 }}
                     className="sm:text-9xl text-8xl font-bold  md:mt-0 m-0 w-fit whitespace-nowrap"
                 >
                     Teodor Marinov Teodor Marinov
@@ -33,13 +33,13 @@ const MobileHero = () => {
                 }}
                 animate={{
                     x: '0%',
-                    transition: { duration: 2.1, ease: 'linear', delay: .6 }
+                    transition: { duration: 3.66, ease: 'linear', delay: .12 }
                 }}
                 className="w-fit"
             >
                 <motion.h1
                     animate={{ x: ['-50.66%', '0%'] }}
-                    transition={{ duration: 3.5, repeat: Infinity, ease: 'linear', delay: 2.7 }}
+                    transition={{ duration: 3.66, repeat: Infinity, ease: 'linear', delay: 3.78}}
                     className="w-fit text-nowrap sm:text-9xl text-8xl font-bold block my-10 text-purple-500"
                 >
                     A Junior Developer A Junior Developer
@@ -49,7 +49,7 @@ const MobileHero = () => {
                 <motion.span
                     initial={{ y: ['100vh'] }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1.5, ease: 'circOut' }}
+                    transition={{ duration: 0.5, delay: 1, ease: 'circOut' }}
                     className="flex items-center"
                 >
                     <FaGithub size={26} className="w-10" />
@@ -67,7 +67,7 @@ const MobileHero = () => {
                 <motion.span
                     initial={{ y: ['100vh'] }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1.6, ease: 'circOut' }}
+                    transition={{ duration: 0.5, delay: 1.05, ease: 'circOut' }}
                     className="flex items-center gap-x-2">
                     <GrDocumentDownload size={26} />
                     <Clickable textColor={'text-gray-100'} lineColor={'bg-gray-100'}>

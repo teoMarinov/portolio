@@ -23,6 +23,7 @@ const data = [
       "MongoDb",
       "Prisma",
       "NodeJs",
+      "Pusher"
     ],
     navTo: "/messangerClone",
   },
