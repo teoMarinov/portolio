@@ -50,7 +50,7 @@ export default function App() {
         </AnimatePresence>
         {loadingScreen ||
           <AnimatePresence mode='wait'>
-            <Routes key={location.pathname}>
+            <Routes location={location.pathname} key={window.location.pathname}>
               <Route path="/" element={
                 <AnimatedPage text={'Home'} display={lockScroll}>
                   <Home />
