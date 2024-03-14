@@ -1,11 +1,11 @@
 import ProjectInfoTamplate from "./ProjectInfoTamplate"
-import TypeScript from "../../Icons/TypeScript"
-import Next from "../../Icons/Next"
-import Shadcn from "../../Icons/Shadcn"
-import Tailwind from "../../Icons/TailwindCss"
-import MongoDb from "../../Icons/MongoDb"
-import Prisma from "../../Icons/Prisma"
+import shadcn from "../../../assets/SkillsIcons/shadcn.png"
 
+import typeScript from "../../../assets/SkillsIcons/typeScript.png"
+import next from '../../../assets/SkillsIcons/nextjs.png'
+import tailwind from '../../../assets/SkillsIcons/tailwind.png'
+import mongoDb from '../../../assets/SkillsIcons/mongo.png'
+import prisma from '../../../assets/SkillsIcons/prisma.png'
 
 const LeetCodeCheatSheet = () => {
     const description = [
@@ -20,12 +20,12 @@ const LeetCodeCheatSheet = () => {
             gitHub={'https://github.com/teoMarinov/LeetCode_Cheatsheet'}
             link={'https://leet-code-cheatsheet.vercel.app'}
         >
-            <TypeScript />
-            <Next />
-            <Shadcn />
-            <Tailwind />
-            <MongoDb />
-            <Prisma />
+            <img src={typeScript} alt="type-script" />
+            <img src={next} alt="next js" />
+            <img src={shadcn} alt="shad cn" />
+            <img src={tailwind} alt="tailwind" />
+            <img src={mongoDb} alt="mongoDb" />
+            <img src={prisma} alt="prisma" />
         </ProjectInfoTamplate>
     )
 }

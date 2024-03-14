@@ -15,6 +15,7 @@ import AllProjectsList from './components/Projects/AllProjectsList/AllProjectsLi
 import JavaScriptInfo from './components/Skills/SkillsInfo/JavaScriptInfo';
 import TypeFitnessMobile from './components/Projects/ProjectInfo/TypeFitnessMobile';
 import Authin from './components/Projects/ProjectInfo/Authin';
+import Rettid from './components/Projects/ProjectInfo/Rettid';
 export default function App() {
 
   const [loadingScreen, setLoadingScreen] = useState(false);
@@ -83,6 +84,11 @@ export default function App() {
                   <Route path='/authin' element={
                     <AnimatedPage text={'Authin'}>
                       <Authin />
+                    </AnimatedPage>
+                  } />
+                  <Route path='/rettid' element={
+                    <AnimatedPage text={'Rettid'}>
+                      <Rettid />
                     </AnimatedPage>
                   } />
               {/* <Route path='/TypeScript' element={
