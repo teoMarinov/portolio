@@ -14,6 +14,7 @@ import TypeScriptInfo from './components/Skills/SkillsInfo/TypeScriptInfo';
 import AllProjectsList from './components/Projects/AllProjectsList/AllProjectsList';
 import JavaScriptInfo from './components/Skills/SkillsInfo/JavaScriptInfo';
 import TypeFitnessMobile from './components/Projects/ProjectInfo/TypeFitnessMobile';
+import Authin from './components/Projects/ProjectInfo/Authin';
 export default function App() {
 
   const [loadingScreen, setLoadingScreen] = useState(false);
@@ -77,6 +78,11 @@ export default function App() {
                   <Route path='/typeFitnessMobile' element={
                     <AnimatedPage text={'TypeFitness Mobile'}>
                       <TypeFitnessMobile />
+                    </AnimatedPage>
+                  } />
+                  <Route path='/authin' element={
+                    <AnimatedPage text={'Authin'}>
+                      <Authin />
                     </AnimatedPage>
                   } />
               {/* <Route path='/TypeScript' element={

@@ -15,7 +15,7 @@ const AllProjectsList = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoaded(true);
-        }, 150)
+        }, 300)
     }, [])
 
     return (

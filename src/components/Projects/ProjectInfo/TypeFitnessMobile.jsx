@@ -10,10 +10,9 @@ const TypeFitnessMobile = () => {
     ]
     return (
         <ProjectInfoTamplate
-            title='Type Fitness'
+            title='Type Fitness Mobile'
             description={description}
-            gitHub={'https://github.com/teoMarinov/typeFitness'}
-            link={'https://type-fitness.vercel.app'}
+            gitHub={'https://github.com/teoMarinov/typeFitnessMobile'}
         >
 
             <img src={typeScript} alt="type-script" />

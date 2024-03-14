@@ -1,10 +1,11 @@
 import ProjectInfoTamplate from "./ProjectInfoTamplate"
-import TypeScript from "../../Icons/TypeScript"
-import Next from "../../Icons/Next"
-import Tailwind from "../../Icons/TailwindCss"
-import MongoDb from "../../Icons/MongoDb"
-import Prisma from "../../Icons/Prisma"
-import Pusher from "../../Icons/Pusher"
+import typeScript from "../../../assets/SkillsIcons/typeScript.png"
+import next from '../../../assets/SkillsIcons/nextjs.png'
+import tailwind from '../../../assets/SkillsIcons/tailwind.png'
+import mongoDb from '../../../assets/SkillsIcons/mongo.png'
+import prisma from '../../../assets/SkillsIcons/prisma.png'
+import pusher from '../../../assets/SkillsIcons/pusher.svg'
+
 
 const MessangerClone = () => {
     const description = [
@@ -20,12 +21,13 @@ const MessangerClone = () => {
             gitHub={'https://github.com/teoMarinov/messenger-clone'}
             link={'https://messenger-clone-woad-gamma.vercel.app'}
         >
-            <TypeScript />
-            <Next />
-            <Tailwind />
-            <MongoDb />
-            <Prisma />
-            <Pusher />
+
+            <img src={typeScript} alt="type-script" />
+            <img src={next} alt="next js" />
+            <img src={tailwind} alt="tailwind" />
+            <img src={mongoDb} alt="mongoDb" />
+            <img src={prisma} alt="prisma" />
+            <img src={pusher} alt="pusher" />
 
         </ProjectInfoTamplate>
     )
