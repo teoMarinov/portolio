@@ -82,7 +82,7 @@ const SkillsRow = () => {
                     translateX: scrollLeft,
                     width: getWidthTop()
                 }}
-                className="bg-green-500"
+                // className="bg-green-500"
             >
                 <div className="flex gap-x-5 2xl:size-44 md:size-40 sm:size-32 size-20 mb-16">
 
