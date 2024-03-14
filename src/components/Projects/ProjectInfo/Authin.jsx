@@ -3,7 +3,7 @@ import typeScript from "../../../assets/SkillsIcons/typeScript.png"
 import next from "../../../assets/SkillsIcons/nextjs.png"
 import tailwind from "../../../assets/SkillsIcons/tailwind.png"
 import shadcn from "../../../assets/SkillsIcons/shadcn.png"
-import node from "../../../assets/SkillsIcons/nodejs.png"
+import node from "../../../assets/SkillsIcons/node.png"
 
 const Authin = () => {
     const description = [

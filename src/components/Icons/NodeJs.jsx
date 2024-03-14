@@ -1,4 +1,4 @@
-import nodeJs from "../../assets/SkillsIcons/nodeJs.png"
+import nodeJs from "../../assets/SkillsIcons/node.png"
 import { useNavigate } from "react-router-dom"
 
 const NodeJs = () => {
