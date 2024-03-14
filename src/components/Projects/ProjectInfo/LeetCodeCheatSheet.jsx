@@ -23,7 +23,7 @@ const LeetCodeCheatSheet = () => {
             <img src={typeScript} alt="type-script" />
             <img src={next} alt="next js" />
             <img src={shadcn} alt="shad cn" />
-            <img src={tailwind} alt="tailwind" />
+            <img src={tailwind} alt="tailwind" className="mt-3"/>
             <img src={mongoDb} alt="mongoDb" />
             <img src={prisma} alt="prisma" />
         </ProjectInfoTamplate>

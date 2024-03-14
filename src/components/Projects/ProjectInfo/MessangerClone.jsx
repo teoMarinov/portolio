@@ -24,7 +24,7 @@ const MessangerClone = () => {
 
             <img src={typeScript} alt="type-script" />
             <img src={next} alt="next js" />
-            <img src={tailwind} alt="tailwind" />
+            <img src={tailwind} alt="tailwind" className="mt-3" />
             <img src={mongoDb} alt="mongoDb" />
             <img src={prisma} alt="prisma" />
             <img src={pusher} alt="pusher" />
