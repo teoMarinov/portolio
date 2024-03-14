@@ -31,7 +31,7 @@ const AllProjectsList = () => {
                         opacity: 1,
                     }}
                     transition={{ duration: 0.3, delay: 1.5, ease: 'easeInOut' }}
-                    className=" w-full text-center sm:text-8xl text-5xl text-gray-600 font-poppins font-extralight py-7"
+                    className="cursor-default w-full text-center sm:text-8xl text-5xl text-gray-600 font-poppins font-extralight py-7"
                 >
                     All Projects
                 </motion.h1>

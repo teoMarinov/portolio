@@ -56,7 +56,7 @@ const data = [
   },
   {
     title: "Rettid",
-    gitHub: "",
+    gitHub: "https://github.com/teoMarinov/rettid",
     stack: ["TypeScript", "React", "ChakraUi", "MySql", "Sql", "Php"],
     navTo: "/rettid",
   },

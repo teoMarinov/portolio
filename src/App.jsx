@@ -13,6 +13,7 @@ import AnimatedPage from './components/AnimatedPage';
 import TypeScriptInfo from './components/Skills/SkillsInfo/TypeScriptInfo';
 import AllProjectsList from './components/Projects/AllProjectsList/AllProjectsList';
 import JavaScriptInfo from './components/Skills/SkillsInfo/JavaScriptInfo';
+import TypeFitnessMobile from './components/Projects/ProjectInfo/TypeFitnessMobile';
 export default function App() {
 
   const [loadingScreen, setLoadingScreen] = useState(false);
@@ -71,6 +72,11 @@ export default function App() {
                   <Route path='/allProjects' element={
                     <AnimatedPage text={'All Projects'}>
                       <AllProjectsList />
+                    </AnimatedPage>
+                  } />
+                  <Route path='/typeFitnessMobile' element={
+                    <AnimatedPage text={'TypeFitness Mobile'}>
+                      <TypeFitnessMobile />
                     </AnimatedPage>
                   } />
               {/* <Route path='/TypeScript' element={

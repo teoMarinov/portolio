@@ -33,9 +33,7 @@ const ProjectListRow = ({ data }) => {
                             {project.stack && project.stack.map((tech) => (
                                 <div key={tech}
                                 >
-                                    <Clickable textColor={'text-gray-600'} lineColor="bg-gray-400">
-                                        <Link to={`/${tech}`}>{tech}</Link>
-                                    </Clickable>
+                                        <p className="cursor-default">{tech}</p>
                                 </div>
                             ))}
                         </div>

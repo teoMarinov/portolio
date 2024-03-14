@@ -1,19 +1,12 @@
 import ProjectInfoTamplate from "./ProjectInfoTamplate"
 import typeScript from "../../../assets/SkillsIcons/typeScript.png"
-import react from "../../../assets/SkillsIcons/react.png"
-import chakraUi from "../../../assets/SkillsIcons/chakraUI.png"
+import reactNative from "../../../assets/SkillsIcons/reactNative.png"
 import firebase from "../../../assets/SkillsIcons/firebase.png"
 
-const TypeFitness = () => {
+const TypeFitnessMobile = () => {
     const description = [
-        'Make workout plans',
-        'Write the weight and reps for each set',
-        'Keep track of your exercise progress',
-        "Lookup and save diffrerent food's macros",
-        "Combine foods into meals",
-        "Save daily calories intake",
-        "View macros logs",
-        "Make a diet plan for the whole week",
+        'Mobile version for TypeFitness',
+        'Using expo'
     ]
     return (
         <ProjectInfoTamplate
@@ -24,12 +17,11 @@ const TypeFitness = () => {
         >
 
             <img src={typeScript} alt="type-script" />
-            <img src={react} alt="react" />
-            <img src={chakraUi} alt="chakraUi" />
+            <img src={reactNative} alt="reactNative" />
             <img src={firebase} alt="firebase" />
 
         </ProjectInfoTamplate>
     )
 }
 
-export default TypeFitness
+export default TypeFitnessMobile

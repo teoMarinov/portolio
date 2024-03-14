@@ -57,7 +57,7 @@ const MobileProjectListRow = ({ data }) => {
                                 whileTap={{ scale: 0.9 }}
                                 key={tech}
                             >
-                                <Link to={`/${tech}`}>{tech}</Link>
+                                <p className="cursor-default">{tech}</p>
                             </motion.div>
                         ))}
                     </div>
