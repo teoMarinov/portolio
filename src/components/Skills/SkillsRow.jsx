@@ -48,11 +48,11 @@ const SkillsRow = () => {
 
     const { scrollYProgress: topScroll } = useScroll({
         target: topRef,
-        offset: ['1 0.9', '0 0.1'],
+        offset: ['1 0.9', '0 0.25'],
     })
     const { scrollYProgress: botScroll } = useScroll({
         target: botRef,
-        offset: ['1 0.9', '0 0.1'],
+        offset: ['1 0.9', '0 0.25'],
     })
 
     const scrollLeft = useTransform(topScroll, [0, 1], ["0", "-100%"])
@@ -62,16 +62,16 @@ const SkillsRow = () => {
 
     const getWidthTop = () => {
         if (screenWidth >= 1536) return `calc(1870px - ${screenWidth}px)`;
-        if (screenWidth > 768) return `calc(1710px - ${screenWidth}px)`;
-        if (screenWidth > 640) return `calc(1410px - ${screenWidth}px)`;
-        return `calc(950px - ${screenWidth}px)`;
+        if (screenWidth > 768) return `calc(1730px - ${screenWidth}px)`;
+        if (screenWidth > 640) return `calc(1430px - ${screenWidth}px)`;
+        return `calc(970px - ${screenWidth}px)`;
     };
 
     const getWidthBot = () => {
         if (screenWidth >= 1536) return `calc(1870px - ${screenWidth}px)`;
-        if (screenWidth > 768) return `calc(1600px - ${screenWidth}px)`;
-        if (screenWidth > 640) return `calc(1300px - ${screenWidth}px)`;
-        return `calc(880px - ${screenWidth}px)`;
+        if (screenWidth > 768) return `calc(1730px - ${screenWidth}px)`;
+        if (screenWidth > 640) return `calc(1430px - ${screenWidth}px)`;
+        return `calc(970px - ${screenWidth}px)`;
     };
 
     return (
@@ -82,6 +82,7 @@ const SkillsRow = () => {
                     translateX: scrollLeft,
                     width: getWidthTop()
                 }}
+                className="bg-green-500"
             >
                 <div className="flex gap-x-5 2xl:size-44 md:size-40 sm:size-32 size-20 mb-16">
 
@@ -107,7 +108,7 @@ const SkillsRow = () => {
             >
                 <div className="flex gap-x-5 2xl:size-48 md:size-40 sm:size-32 size-20 mb-16">
 
-                    <img src={tailwind} alt="tailwind" className="mt-16 -translate-y-7"/>
+                    <img src={tailwind} alt="tailwind" className="mt-8 -translate-y-4"/>
                     <img src={chakraUi} alt="chakra Ui" />
                     <img src={shadcn} alt="shadcn" />
                     <img src={firebase} alt="css" />

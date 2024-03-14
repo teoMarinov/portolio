@@ -34,16 +34,18 @@ const MobileProjectListRow = ({ data }) => {
                                 href={project.gitHub}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                            >
-                                <FaGithub className="md:size-8 size-6" />
+                                className="group transition-[color] flex items-center hover:text-sky-600 border-l xl:px-24 sm:px-8  ">
+
+                                <FaGithub className="md:size-8 size-6 transition-transform group-hover:-translate-y-2" />
                             </a>
                             {project.link && (
                                 <a
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                >
-                                    <CiLink className="md:size-10 size-8" />
+                                    className="group transition-[color] hover:text-sky-600">
+
+                                    <CiLink className="md:size-10 size-8 transition-transform group-hover:-translate-y-2" />
                                 </a>)
                             }
                         </div>

@@ -45,7 +45,7 @@ const ProjectListRow = ({ data }) => {
                             href={project.gitHub}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group transition-[color] flex items-center  hover:text-sky-600 border-l xl:px-24 px-8 border-gray-700/40 ">
+                            className="group transition-[color] flex items-center hover:text-sky-600 border-l xl:px-24 px-8 border-gray-700/40 ">
                             <FaGithub size={44} className=" transition-transform group-hover:-translate-y-2" />
                         </a>
                         {project.link && (

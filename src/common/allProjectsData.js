@@ -52,7 +52,7 @@ const data = [
     title: "Portfolio",
     gitHub: "https://github.com/teoMarinov/portolio",
     stack: ["JavaScript", "React", "TailwindCss", "FramerMotion"],
-    navTo: "/",
+    navTo: "https://teodor-marinov-portfolio.netlify.app/",
   },
   {
     title: "Rettid",

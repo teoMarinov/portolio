@@ -9,17 +9,17 @@ const AnimatedPage = ({ children, text, display = true }) => {
                 }}
                 animate={{
                     y: '-100%',
-                    transition: { duration: .3, delay: 1, ease: 'easeInOut' }
+                    transition: { duration: .4, delay: .2, ease: 'easeInOut' }
                 }}
                 exit={
                     {
                         y: ['100%', '0%'],
-                        transition: { duration: .3 }
+                        transition: { duration: .4, ease: 'easeInOut' }
                     }
                 }
                 className={clsx('fixed w-screen h-screen bg-zinc-800 justify-center items-center z-50 text-white text-center sm:text-6xl text-4xl font-light font-poppins', display ? " flex" : "hidden")}
             >
-                {text}
+                {/* {text} */}
             </motion.div>
             <div className="-z-50">
                 {children}
