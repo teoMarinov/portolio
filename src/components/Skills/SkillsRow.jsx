@@ -48,11 +48,11 @@ const SkillsRow = () => {
 
     const { scrollYProgress: topScroll } = useScroll({
         target: topRef,
-        offset: ['1 0.9', '0 0.25'],
+        offset: ['1 0.9', '0 0.05'],
     })
     const { scrollYProgress: botScroll } = useScroll({
         target: botRef,
-        offset: ['1 0.9', '0 0.25'],
+        offset: ['1 0.9', '0 0.05'],
     })
 
     const scrollLeft = useTransform(topScroll, [0, 1], ["0", "-100%"])
