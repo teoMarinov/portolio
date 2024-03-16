@@ -84,7 +84,7 @@ const SkillsRow = () => {
                 }}
                 // className="bg-green-500"
             >
-                <div className="flex gap-x-5 2xl:size-44 md:size-40 sm:size-32 size-20 mb-16">
+                <div className="flex gap-x-16 2xl:size-44 md:size-40 sm:size-32 size-20 mb-16">
 
                     <img src={typeScript} alt="type script" />
                     <img src={javaScript} alt="java script" />
