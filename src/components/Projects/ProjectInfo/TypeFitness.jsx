@@ -9,7 +9,7 @@ const TypeFitness = () => {
         'Make workout plans',
         'Write the weight and reps for each set',
         'Keep track of your exercise progress',
-        "Lookup and save diffrerent food's macros",
+        "Lookup and save different food's macros",
         "Combine foods into meals",
         "Save daily calories intake",
         "View macros logs",
