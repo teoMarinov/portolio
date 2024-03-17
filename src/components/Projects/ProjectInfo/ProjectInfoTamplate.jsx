@@ -20,7 +20,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
             animate={{
               width: 'fit-content'
             }}
-            transition={{ duration: 0.4, delay: 1.05, ease: 'easeIn' }}
+            transition={{ duration: 0.4, delay: .6, ease: 'easeIn' }}
             className="overflow-hidden md:text-nowrap sm:text-6xl text-5xl text-gray-600 font-poppins font-light sm:h-20 h-fit"
           >
             {title}
@@ -32,7 +32,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
             animate={{
               width: 'fit-content'
             }}
-            transition={{ duration: 0.4, delay: 1.45 }}
+            transition={{ duration: 0.4, delay: 1 }}
             className="flex items-center w-fit pt-6 pl-3 gap-x-5 lg:text-xl md:text-5xl text-2xl overflow-hidden"
           >
             <a
@@ -56,8 +56,8 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
         </div>
         <motion.div
           initial={{
-            x: '100px',
-            opacity: 0,
+            x: '200px',
+            opacity: 0.5,
             rotate: 360
           }}
           animate={{
@@ -65,7 +65,7 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
             opacity: 1,
             rotate: 0
           }}
-          transition={{ duration: 0.5, delay: 0.2 * description.length + 0.95 + children.length * 0.20 }}
+          transition={{ duration: 0.6, delay: 0.25 * description.length + 0.95 + children.length * 0.2 }}
           className="size-fit m-2 mr-5 border-gray-700/60 sm:p-3 p-2 border-2 rounded-full text-gray-800 cursor-pointer transition-[backGround] lg:hover:bg-gray-200 group"
           onClick={() => navigate('/')}
         >
@@ -84,8 +84,8 @@ const ProjectInfoTamplate = ({ children, gitHub, link, title, description }) => 
               translateX: '0px',
               opacity: 1
             }}
-            transition={{ duration: 0.2, delay: 0.9 + index * 0.2, ease: 'circOut' }}
-
+            transition={{ duration: 0.2, delay: 1 + index * 0.2, ease: 'circOut' }}
+s
             key={index}
           >
             {text}

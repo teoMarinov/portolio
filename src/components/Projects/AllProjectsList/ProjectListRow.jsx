@@ -15,7 +15,7 @@ const ProjectListRow = ({ data }) => {
                         y: -100
                     }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: .2, ease: 'easeIn', delay: index * 0.2 + 1.6 }}
+                    transition={{ duration: .2, ease: 'easeIn', delay: index * 0.2 + .85 }}
 
                     key={project.title}
                     className="p-6 font-poppins overflow-hidden border-b border-gray-700/40 flex justify-between"

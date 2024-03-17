@@ -30,7 +30,7 @@ const AllProjectsList = () => {
                         translateY: '0px',
                         opacity: 1,
                     }}
-                    transition={{ duration: 0.3, delay: 1.5, ease: 'easeInOut' }}
+                    transition={{ duration: 0.3, delay: .6, ease: 'easeInOut' }}
                     className="cursor-default w-full text-center sm:text-8xl text-5xl text-gray-600 font-poppins font-extralight py-7"
                 >
                     All Projects

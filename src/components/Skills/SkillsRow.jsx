@@ -48,11 +48,11 @@ const SkillsRow = () => {
 
     const { scrollYProgress: topScroll } = useScroll({
         target: topRef,
-        offset: ['1 0.9', '0 0.05'],
+        offset: ['1 0.9', '0 0.1'],
     })
     const { scrollYProgress: botScroll } = useScroll({
         target: botRef,
-        offset: ['1 0.9', '0 0.05'],
+        offset: ['1 0.75', '0 0'],
     })
 
     const scrollLeft = useTransform(topScroll, [0, 1], ["0", "-100%"])
@@ -70,7 +70,7 @@ const SkillsRow = () => {
     const getWidthBot = () => {
         if (screenWidth >= 1536) return `calc(1870px - ${screenWidth}px)`;
         if (screenWidth > 768) return `calc(1730px - ${screenWidth}px)`;
-        if (screenWidth > 640) return `calc(1430px - ${screenWidth}px)`;
+        if (screenWidth > 640) return `calc(1460px - ${screenWidth}px)`;
         return `calc(970px - ${screenWidth}px)`;
     };
 
@@ -84,7 +84,7 @@ const SkillsRow = () => {
                 }}
                 // className="bg-green-500"
             >
-                <div className="flex gap-x-16 2xl:size-44 md:size-40 sm:size-32 size-20 mb-16">
+                <div className="flex gap-x-5 2xl:size-44 md:size-40 sm:size-32 size-20 mb-16">
 
                     <img src={typeScript} alt="type script" />
                     <img src={javaScript} alt="java script" />
