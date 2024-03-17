@@ -2,7 +2,7 @@
 import Clickable from "../Clickable";
 import { FaGithub } from "react-icons/fa";
 import { GrDocumentDownload } from "react-icons/gr";
-import cv from '../../assets/TeodorMarinovCv.pdf'
+import cv from '../../assets/TeodorMarinovCV.pdf'
 import { motion } from "framer-motion";
 const MobileHero = () => {
     return (
