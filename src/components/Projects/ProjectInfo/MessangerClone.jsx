@@ -9,10 +9,10 @@ import pusher from '../../../assets/SkillsIcons/pusher.svg'
 
 const MessangerClone = () => {
     const description = [
-        "Github and Google authentication",
+        // "Github and Google authentication",
         "Message with people",
         "Make group chats",
-        "Edit your profile,"
+        "Edit your profile"
     ]
     return (
         <ProjectInfoTamplate
