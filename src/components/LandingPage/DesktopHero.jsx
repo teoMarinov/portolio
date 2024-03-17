@@ -68,7 +68,7 @@ const DesktopHero = () => {
                 transition={{ duration: 0.4, delay: 1.3, ease: 'circOut' }}
                 className="hidden xl:inline ml-16"
             >
-                <img src={picture} alt="picture" className="w-[60rem] rounded-full" />
+                <img src={picture} alt="picture" className="w-[55rem] rounded-full shadow-2xl" />
             </motion.div>
         </div>
     )

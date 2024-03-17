@@ -21,7 +21,7 @@ const LandingPage = () => {
 
     return (
         <div ref={ref} >
-            <Element name="home" className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-300 to-gray-400">
+            <Element name="home" className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-400 to-gray-500">
                 <motion.div
                     style={{
                         translateY: scroll
