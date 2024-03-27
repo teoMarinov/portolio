@@ -52,27 +52,13 @@ const SkillsRow = () => {
     })
     const { scrollYProgress: botScroll } = useScroll({
         target: botRef,
-        offset: ['1 0.75', '0 0'],
+        offset: ['1 0.75', '0 0.2'],
     })
 
     const scrollLeft = useTransform(topScroll, [0, 1], ["0", "-100%"])
 
     const scrollRight = useTransform(botScroll, [0, 1], ["-100%", "0%"])
-    const screenWidth = window.innerWidth;
 
-    const getWidthTop = () => {
-        if (screenWidth >= 1536) return `calc(1870px - ${screenWidth}px)`;
-        if (screenWidth > 768) return `calc(1730px - ${screenWidth}px)`;
-        if (screenWidth > 640) return `calc(1430px - ${screenWidth}px)`;
-        return `calc(970px - ${screenWidth}px)`;
-    };
-
-    const getWidthBot = () => {
-        if (screenWidth >= 1536) return `calc(1870px - ${screenWidth}px)`;
-        if (screenWidth > 768) return `calc(1730px - ${screenWidth}px)`;
-        if (screenWidth > 640) return `calc(1460px - ${screenWidth}px)`;
-        return `calc(970px - ${screenWidth}px)`;
-    };
 
     return (
         <>
@@ -80,9 +66,13 @@ const SkillsRow = () => {
                 ref={topRef}
                 style={{
                     translateX: scrollLeft,
-                    width: getWidthTop()
                 }}
-                // className="bg-green-500"
+                className="
+                2xl:w-[calc(1870px-100%)]
+                md:w-[calc(1730px-100%)]
+                sm:w-[calc(1460px-100%)]
+                w-[calc(970px-100%)]
+                "
             >
                 <div className="flex gap-x-5 2xl:size-44 md:size-40 sm:size-32 size-20 mb-16">
 
@@ -103,8 +93,13 @@ const SkillsRow = () => {
                 ref={botRef}
                 style={{
                     translateX: scrollRight,
-                    width: getWidthBot()
                 }}
+                className="
+                2xl:w-[calc(2100px-100%)]
+                md:w-[calc(1770px-100%)]
+                sm:w-[calc(1460px-100%)]
+                w-[calc(970px-100%)]
+                "
             >
                 <div className="flex gap-x-5 2xl:size-48 md:size-40 sm:size-32 size-20 mb-16">
 
