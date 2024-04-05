@@ -39,7 +39,8 @@ import framerMotion from "../../assets/SkillsIcons/framerMotion.svg"
 import firebase from "../../assets/SkillsIcons/firebase.png"
 import css from "../../assets/SkillsIcons/css.png"
 import chakraUi from "../../assets/SkillsIcons/chakraUI.png"
-
+import java from "../../assets/SkillsIcons/java.svg"
+import springBoot from "../../assets/SkillsIcons/spring-svgrepo-com.svg"
 
 const SkillsRow = () => {
 
@@ -67,11 +68,17 @@ const SkillsRow = () => {
                 style={{
                     translateX: scrollLeft,
                 }}
+                /**
+                 * 2xl: 190px
+                 * md: 175px
+                 * sm: 145px
+                 * 95px
+                */
                 className="
-                2xl:w-[calc(1870px-100%)]
-                md:w-[calc(1730px-100%)]
-                sm:w-[calc(1460px-100%)]
-                w-[calc(970px-100%)]
+                2xl:w-[calc(2100px-100%)]
+                md:w-[calc(1930px-100%)]
+                sm:w-[calc(1590px-100%)]
+                w-[calc(1075px-100%)]
                 "
             >
                 <div className="flex gap-x-5 2xl:size-44 md:size-40 sm:size-32 size-20 mb-16">
@@ -83,9 +90,10 @@ const SkillsRow = () => {
                     <img src={next} alt="next" />
                     <img src={react} alt="react" />
                     <img src={reactNative} alt="react native" />
+                    <img src={java} alt="java" />
+                    <img src={springBoot} alt="springBoot" />
                     <img src={php} alt="php" />
                     <img src={sql} alt="sql" />
-                    <img src={nodeJs} alt="node J S" />
 
                 </div>
             </motion.div>
@@ -94,16 +102,23 @@ const SkillsRow = () => {
                 style={{
                     translateX: scrollRight,
                 }}
+                /**
+                 * 2xl: 211px
+                 * md: 179px
+                 * sm: 147px
+                 * 100px
+                */
                 className="
-                2xl:w-[calc(2100px-100%)]
-                md:w-[calc(1770px-100%)]
-                sm:w-[calc(1460px-100%)]
-                w-[calc(970px-100%)]
+                2xl:w-[calc(2110px-100%)]
+                md:w-[calc(1790px-100%)]
+                sm:w-[calc(1470px-100%)]
+                w-[calc(1000px-100%)]
                 "
             >
                 <div className="flex gap-x-5 2xl:size-48 md:size-40 sm:size-32 size-20 mb-16">
 
-                    <img src={tailwind} alt="tailwind" className="mt-8 -translate-y-4"/>
+                    <img src={nodeJs} alt="node J S" />
+                    <img src={tailwind} alt="tailwind" className="mt-8 -translate-y-4" />
                     <img src={chakraUi} alt="chakra Ui" />
                     <img src={shadcn} alt="shadcn" />
                     <img src={firebase} alt="css" />
@@ -112,7 +127,6 @@ const SkillsRow = () => {
                     <img src={mySql} alt="my Sql" />
                     <img src={git} alt="git" />
                     <img src={framerMotion} alt="framerMotion" />
-                    <img src={pusher} alt="pusher" />
 
                 </div>
 
