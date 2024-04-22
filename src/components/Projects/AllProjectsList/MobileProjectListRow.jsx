@@ -34,7 +34,7 @@ const MobileProjectListRow = ({ data }) => {
                                 href={project.gitHub}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group transition-[color] flex items-center hover:text-sky-600 border-l xl:px-24 sm:px-8  ">
+                                className="group transition-[color] flex items-center hover:text-sky-600 md:border-l sm:px-8  ">
 
                                 <FaGithub className="md:size-8 size-6 transition-transform group-hover:-translate-y-2" />
                             </a>
